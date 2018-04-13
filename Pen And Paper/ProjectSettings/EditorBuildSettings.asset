@@ -4,4 +4,19 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Screnes/Start.unity
+    guid: 2976723b9d82e444b95d1376dddf87cf
+  - enabled: 1
+    path: Assets/Screnes/Finished Lost.unity
+    guid: 2db8861bb955e4ac7b2741322cc9bbc9
+  - enabled: 1
+    path: Assets/Screnes/Finished Won.unity
+    guid: 79abfe95b88124a3b92d79e1bb368f7e
+  - enabled: 1
+    path: Assets/Screnes/Play.unity
+    guid: fd48fd9da1ce5c64599abb0d837c0e53
+  - enabled: 1
+    path: Assets/Screnes/Character Select.unity
+    guid: 800d5fd5713e44d94b1bf064ed476ad3
