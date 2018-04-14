@@ -90,6 +90,13 @@ public class CharacterSelect : MonoBehaviour
         string boxNo = (newSelection + 1).ToString();
         GameObject box = transform.Find("Character " + boxNo).gameObject;
         CharacterBox characterBox = box.GetComponent<CharacterBox>();
+
+        if(isOn) {
+            Transform audioHoverObject = box.transform.Find("Hovered Audio");
+            if(audioHoverObject) {
+                audioHoverObject.gameObject.GetComponent<AudioSource>().Play();
+            }
+        }
         characterBox.Toggle(isOn);
         UpdateSelectedAvatar();
     }
@@ -145,9 +152,16 @@ public class CharacterSelect : MonoBehaviour
         {
             if (firstPlayer)
             {
-                if (inputA.ButtonX || inputA.ButtonA || inputA.ButtonB || inputA.ButtonY)
+                if (inputA.ButtonX || inputA.ButtonA || inputA.ButtonB || inputA.ButtonY || Input.GetKeyUp(KeyCode.Z))
                 {
                     if(this.currentSelection == 0 || this.currentSelection == 1) {
+                        string boxNo = (this.currentSelection + 1).ToString();
+                        GameObject box = transform.Find("Character " + boxNo).gameObject;
+                        Transform audioSelectObject = box.transform.Find("Selected Audio");
+                        if(audioSelectObject) {
+                            audioSelectObject.gameObject.GetComponent<AudioSource>().Play();
+                        }
+
                         this.confirmed = true;
                         readyCheck.SetReady("A", true);
                         GameObject.Find("Character Manager").GetComponent<CharacterManager>().characterPlayerA = this.currentSelection;
@@ -158,9 +172,16 @@ public class CharacterSelect : MonoBehaviour
             }
             else
             {
-                if (inputB.ButtonX || inputB.ButtonCircle || inputB.ButtonTriangle || inputB.ButtonSquare)
+                if (inputB.ButtonX || inputB.ButtonCircle || inputB.ButtonTriangle || inputB.ButtonSquare || Input.GetKeyUp(KeyCode.X))
                 {
                     if(this.currentSelection == 0 || this.currentSelection == 1) {
+                        string boxNo = (this.currentSelection + 1).ToString();
+                        GameObject box = transform.Find("Character " + boxNo).gameObject;
+                        Transform audioSelectObject = box.transform.Find("Selected Audio");
+                        if(audioSelectObject) {
+                            audioSelectObject.gameObject.GetComponent<AudioSource>().Play();
+                        }
+
                         this.confirmed = true;
                         readyCheck.SetReady("B", true);
                         GameObject.Find("Character Manager").GetComponent<CharacterManager>().characterPlayerB = this.currentSelection;
