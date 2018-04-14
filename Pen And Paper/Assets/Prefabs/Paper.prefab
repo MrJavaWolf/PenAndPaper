@@ -970,7 +970,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lookPoint: {fileID: 4012200358223050}
   Duration: 5
-  HasTween: 0
 --- !u!114 &114312665201007552
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -984,7 +983,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lookPoint: {fileID: 4090568375307952}
   Duration: 5
-  HasTween: 0
 --- !u!114 &114429128998094924
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1014,6 +1012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DontDestroyOnLoadConfig: 0
+  DisableShakes: 0
   LeftHand:
     Hand: {fileID: 4844077743369430}
     UserInputVerticalSpeed: 2
@@ -1026,5 +1025,5 @@ MonoBehaviour:
     VerticalShakiness: 2
   Paper: {fileID: 4090568375307952}
   PaperRipDistance: 3
-  PenBreakingLimit: 11
+  PenBreakingLimit: 12
   PenBreakingMultiplier: 25

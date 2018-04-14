@@ -15,17 +15,31 @@ public class CameraPoint : MonoBehaviour
     private Vector3 startPosition;
     private Quaternion startRotation;
 
+    private Sequence currentDotSequence;
+    private void OnDisable()
+    {
+        if (currentDotSequence != null)
+        {
+            currentDotSequence.Kill();
+        }
+    }
+
     public void MountCamera(Transform cam)
     {
+        currentDotSequence = DOTween.Sequence();
         cam.parent = null;
         float value = 0;
-        DOTween.To(() => value, (v) =>
+        startPosition = cam.position;
+        startRotation = cam.rotation;
+
+        currentDotSequence.Append(DOTween.To(() => value, (v) =>
          {
              value = v;
              var direction = (transform.position - startPosition).normalized;
-             var totalDistance = (startPosition - transform.position).sqrMagnitude;
-             var wantedPosition = startPosition + direction * totalDistance * value;
+             var totalDistance = (startPosition - transform.position).magnitude;
+             var wantedPosition = startPosition + direction * (totalDistance * value);
              cam.position = wantedPosition;
+             cam.rotation = Quaternion.Lerp(startRotation, Quaternion.LookRotation(lookPoint.position - transform.position, transform.up), value);
 
          }, 1, 2)
          .OnComplete(() =>
@@ -33,14 +47,7 @@ public class CameraPoint : MonoBehaviour
              cam.transform.LookAt(lookPoint);
              cam.transform.SetParent(transform);
          })
-         .SetEase(Ease.InOutCubic);
-
-
-
-
-        timer = Duration;
-        Attached = true;
-        cam.transform.LookAt(lookPoint);
+         .SetEase(Ease.InOutCubic));
 
         timer = Duration;
         Attached = true;
