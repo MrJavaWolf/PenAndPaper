@@ -87,6 +87,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4012200358223050}
+  - component: {fileID: 114476198282876462}
   m_Layer: 0
   m_Name: Paper
   m_TagString: Untagged
@@ -774,6 +775,30 @@ MonoBehaviour:
   DontDestroyOnLoadConfig: 0
   Shapes:
   - {fileID: 1696106334366862, guid: aa18919402c261741879d8b69ec0c8fd, type: 2}
+--- !u!114 &114476198282876462
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1615333185762120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c79a19352a354746928eb8830ad6cd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MovementSpeed: 2
+  LeftHand:
+    Hand: {fileID: 4844077743369430}
+    UserInputVerticalSpeed: 2
+    BaseVerticalSpeed: -0.5
+    VerticalShakiness: 0.3
+  RightHand:
+    Hand: {fileID: 4842910742647068}
+    UserInputVerticalSpeed: 2
+    BaseVerticalSpeed: 0.2
+    VerticalShakiness: 0.5
+  Paper: {fileID: 4090568375307952}
+  PaperRipDistance: 2
 --- !u!114 &114620847715350154
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -786,4 +811,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MovementSpeed: 2
+  LeftHand:
+    Hand: {fileID: 0}
+    UserInputVerticalSpeed: 0
+    BaseVerticalSpeed: 0
+    VerticalShakiness: 0
+  RightHand:
+    Hand: {fileID: 0}
+    UserInputVerticalSpeed: 0
+    BaseVerticalSpeed: 0
+    VerticalShakiness: 0
   Paper: {fileID: 0}
+  PaperRipDistance: 2
