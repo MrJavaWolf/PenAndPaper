@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PenController : Singleton<PenController>
 {
+    public bool DisableShakes = false;
     public GameObject Tip;
     public float MovementSpeed = 2;
     public float BaseSpeed = 0.3f;
@@ -42,8 +43,9 @@ public class PenController : Singleton<PenController>
         var movement =
             transform.forward * input.RightStick.y * MovementSpeed * Time.deltaTime +
             transform.right * input.LeftStick.x * MovementSpeed * Time.deltaTime +
-            transform.up * input.LeftStick.y * MovementSpeed * Time.deltaTime +
-            transform.forward * BaseSpeed * Time.deltaTime +
+            transform.up * input.LeftStick.y * MovementSpeed * Time.deltaTime;
+        if (!DisableShakes)
+            movement += transform.forward * BaseSpeed * Time.deltaTime +
             ((transform.up * (1 - perlinNoise)) + (transform.right * perlinNoise)).normalized * perlinNoiseRange * MovmentBias * Time.deltaTime +
             transform.forward * Random.Range(-0.9f, 1) * HorizontalShakiness * Time.deltaTime +
             transform.up * Random.Range(-0.9f, 1) * VerticalShakiness * Time.deltaTime;
