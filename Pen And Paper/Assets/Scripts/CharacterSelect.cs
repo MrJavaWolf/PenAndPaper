@@ -103,6 +103,9 @@ public class CharacterSelect : MonoBehaviour
             case 1:
                 characterName = "Feme";
             break;
+            default:
+                characterName = "Unlock" + (this.currentSelection - 1).ToString();
+            break;
         }
 
         this.HideAllAvatars(this.CharacterRole());
