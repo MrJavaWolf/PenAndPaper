@@ -14,17 +14,39 @@ public class PaperController : Singleton<PaperController>
     /// </summary>
     public float PaperRipDistance = 3;
 
+    public float PenBreakingLimit = 4;
+    
+    /// <summary>
+    /// Higher = Easiere to break
+    /// </summary>
+    public float PenBreakingMultiplier = 30;
+
+
     public event EventHandler OnPaperRip;
+    public event EventHandler OnPenBreaking;
+
 
     // Update is called once per frame
     void Update()
     {
         var input = InputController.Instance.GetPs4Input();
+        var prevLeftHandPostition = LeftHand.Hand.position;
+        var prevRightHandPostition = RightHand.Hand.position;
         UpdateHand(LeftHand, input.LeftStick);
         UpdateHand(RightHand, input.RightStick);
+
+        var distanceMoved = (Vector3.Distance(prevLeftHandPostition, LeftHand.Hand.position) +
+             Vector3.Distance(prevRightHandPostition, RightHand.Hand.position) +
+             (PenController.Instance.DistanceMoved * PenBreakingMultiplier)) /
+              Mathf.Max(Time.deltaTime, 0.001f);
+
         if (WillPaperRip())
         {
             if (OnPaperRip != null) OnPaperRip(this, EventArgs.Empty);
+        }
+        else if (ShapeManager.Instance.PenIsOnPaper && distanceMoved > PenBreakingLimit)
+        {
+            if (OnPenBreaking != null) OnPenBreaking(this, EventArgs.Empty);
         }
         else
         {

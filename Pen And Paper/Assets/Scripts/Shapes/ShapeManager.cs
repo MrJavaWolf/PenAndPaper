@@ -27,10 +27,12 @@ public class ShapeManager : Singleton<ShapeManager>
             currShapeIndex++;
             Destroy(currShape.gameObject);
             currShape = Instantiate(Shapes[currShapeIndex], transform, true).GetComponent<ShapeController>();
+            currShape.transform.localPosition = Vector2.zero;
+            currShape.transform.localRotation = Quaternion.Euler(Vector3.zero);
         }
         else
         {
-            if(GameEnded!= null) GameEnded();
+            if (GameEnded != null) GameEnded();
         }
     }
 
@@ -46,6 +48,6 @@ public class ShapeManager : Singleton<ShapeManager>
 
     public void PuncturePaper()
     {
-        if(PaperPunctured != null) PaperPunctured();
+        if (PaperPunctured != null) PaperPunctured();
     }
 }
