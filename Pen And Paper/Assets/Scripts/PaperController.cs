@@ -41,7 +41,7 @@ public class PaperController : Singleton<PaperController>
              Vector3.Distance(prevRightHandPostition, RightHand.Hand.position) +
              (PenController.Instance.DistanceMoved * PenBreakingMultiplier)) /
               Mathf.Max(Time.deltaTime, 0.001f);
-            Debug.Log("distanceMoved: " + distanceMoved);
+            //Debug.Log("distanceMoved: " + distanceMoved);
         }
 
         if (WillPaperRip())
