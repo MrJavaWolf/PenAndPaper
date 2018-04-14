@@ -28,8 +28,8 @@ public class PaperPuncturedScript : Singleton<PaperPuncturedScript>
     {
         var paperCentralPosition = (LeftHand.position + RightHand.position) / 2;
         var cameraPosition = paperCentralPosition + CameraOffset;
-        Camera.main.transform.position = cameraPosition;
-        Camera.main.transform.LookAt(paperCentralPosition);
+        PlayCamera.Instance.transform.position = cameraPosition;
+        PlayCamera.Instance.transform.LookAt(paperCentralPosition);
         Pen.position += -Pen.forward * 0.5f;
         yield return new WaitForSeconds(1);
 

@@ -7,6 +7,7 @@ public class ShapeManager : Singleton<ShapeManager>
 {
     public event Action PaperPunctured;
     public event Action GameEnded;
+    public event Action NewShape;
 
     public List<GameObject> Shapes = new List<GameObject>();
     private int currShapeIndex;
@@ -24,6 +25,9 @@ public class ShapeManager : Singleton<ShapeManager>
     {
         if ((currShapeIndex + 1) < Shapes.Count)
         {
+            if (NewShape != null)
+                NewShape.Invoke();
+
             currShapeIndex++;
             Destroy(currShape.gameObject);
             currShape = Instantiate(Shapes[currShapeIndex], transform, true).GetComponent<ShapeController>();
