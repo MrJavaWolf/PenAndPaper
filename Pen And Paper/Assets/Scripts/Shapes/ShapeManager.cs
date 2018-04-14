@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ShapeManager : Singleton<ShapeManager>
 {
-    public event Action PaperPunctured;
+    public event Action OnPenBreaking;
     public event Action GameEnded;
     public event Action NewShape;
 
@@ -52,6 +52,6 @@ public class ShapeManager : Singleton<ShapeManager>
 
     public void PuncturePaper()
     {
-        if (PaperPunctured != null) PaperPunctured();
+        if (OnPenBreaking != null) OnPenBreaking();
     }
 }

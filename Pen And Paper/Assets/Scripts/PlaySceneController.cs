@@ -10,9 +10,7 @@ public class PlaySceneController : MonoBehaviour
     void Start()
     {
         PaperController.Instance.OnPaperRip += Instance_OnPaperRip;
-        PaperController.Instance.OnPenBreaking += Instance_OnPenBreaking; ;
-
-        ShapeManager.Instance.PaperPunctured += Instance_PaperPunctured;
+        ShapeManager.Instance.OnPenBreaking += Instance_OnPenBreaking;
         ShapeManager.Instance.GameEnded += Instance_GameEnded;
     }
 
@@ -20,17 +18,12 @@ public class PlaySceneController : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Q))
         {
-            Instance_PaperPunctured();
+            Instance_OnPenBreaking();
         }
 
         if (Input.GetKeyUp(KeyCode.W))
         {
             Instance_OnPaperRip(this, EventArgs.Empty);
-        }
-
-        if (Input.GetKeyUp(KeyCode.E))
-        {
-            Instance_OnPenBreaking(this, EventArgs.Empty);
         }
 
         if (Input.GetKeyUp(KeyCode.R))
@@ -44,10 +37,10 @@ public class PlaySceneController : MonoBehaviour
         SceneManager.LoadScene("Finished Won");
     }
 
-    private void Instance_PaperPunctured()
+    private void Instance_OnPenBreaking()
     {
         DisablePlayScripts();
-        PaperPuncturedScript.Instance.Play(() =>
+        PencilBrokeScript.Instance.Play(() =>
         {
             SceneManager.LoadScene("Finished Lost");
         });
@@ -62,14 +55,6 @@ public class PlaySceneController : MonoBehaviour
         });
     }
 
-    private void Instance_OnPenBreaking(object sender, System.EventArgs e)
-    {
-        DisablePlayScripts();
-        PencilBrokeScript.Instance.Play(() =>
-        {
-            SceneManager.LoadScene("Finished Lost");
-        });
-    }
 
     private void DisablePlayScripts()
     {
