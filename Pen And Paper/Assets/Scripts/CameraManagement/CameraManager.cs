@@ -16,14 +16,14 @@ public class CameraManager : Singleton<CameraManager>
         }
 
         lastIndex = Random.Range(0, CamPoints.Count - 1);
-        CamPoints[lastIndex].MountCamera(Camera.main);
+        CamPoints[lastIndex].MountCamera(PlayCamera.Instance.transform);
     }
 
     public void NextCameraAngle()
     {
         if (CamPoints.Count < 1)
         {
-            CamPoints[Random.Range(0, CamPoints.Count - 1)].MountCamera(Camera.main);
+            CamPoints[Random.Range(0, CamPoints.Count - 1)].MountCamera(PlayCamera.Instance.transform);
             return;
         }
 
@@ -34,6 +34,6 @@ public class CameraManager : Singleton<CameraManager>
         while (nextIndex == lastIndex);
 
         lastIndex = nextIndex;
-        CamPoints[nextIndex].MountCamera(Camera.main);
+        CamPoints[nextIndex].MountCamera(PlayCamera.Instance.transform);
     }
 }

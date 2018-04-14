@@ -35,8 +35,8 @@ public class PaperRipScript : Singleton<PaperRipScript>
         LeftPaper.parent = LeftHand;
         RightPaper.parent = RightHand;
 
-        Camera.main.transform.position = cameraPosition;
-        Camera.main.transform.LookAt(paperCentralPosition);
+        PlayCamera.Instance.transform.position = cameraPosition;
+        PlayCamera.Instance.transform.LookAt(paperCentralPosition);
         yield return new WaitForSeconds(1);
         LeftHand.DOMove(LeftHand.position - LeftHand.right * 2, 1).SetEase(PaperMovement);
         RightHand.DOMove(RightHand.position + RightHand.right * 2, 1).SetEase(PaperMovement);
