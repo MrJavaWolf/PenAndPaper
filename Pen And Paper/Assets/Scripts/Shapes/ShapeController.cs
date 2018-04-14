@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -75,7 +76,7 @@ public class ShapeController : MonoBehaviour
         //Check for game over
         if (GetPenDistance() < BreakDistance)
         {
-            //Break the paper
+            ShapeManager.Instance.PaperBreak();
         }
     }
 

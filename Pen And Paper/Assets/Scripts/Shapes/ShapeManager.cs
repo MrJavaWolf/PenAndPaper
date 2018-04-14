@@ -1,19 +1,23 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ShapeManager : Singleton<ShapeManager>
 {
+    public event Action PaperPunctured;
+    public event Action GameEnded;
+
     public List<GameObject> Shapes = new List<GameObject>();
     private int currShapeIndex;
-    private GameObject currShape;
+    public ShapeController currShape { get; set; }
 
     public bool PenIsOnPaper { get; set; }
 
     private void Start()
     {
         currShapeIndex = 0;
-        currShape = Instantiate(Shapes[currShapeIndex], transform, true);
+        currShape = Instantiate(Shapes[currShapeIndex], transform, true).GetComponent<ShapeController>();
     }
 
     public void GetNextShape()
@@ -21,12 +25,12 @@ public class ShapeManager : Singleton<ShapeManager>
         if ((currShapeIndex + 1) < Shapes.Count)
         {
             currShapeIndex++;
-            Destroy(currShape);
-            currShape = Instantiate(Shapes[currShapeIndex], transform, true);
+            Destroy(currShape.gameObject);
+            currShape = Instantiate(Shapes[currShapeIndex], transform, true).GetComponent<ShapeController>();
         }
         else
         {
-            //Game is completed!!
+            GameEnded.Invoke();
         }
     }
 
@@ -38,5 +42,10 @@ public class ShapeManager : Singleton<ShapeManager>
     private void OnTriggerExit(Collider other)
     {
         PenIsOnPaper = false;
+    }
+
+    public void PaperBreak()
+    {
+        PaperPunctured.Invoke();
     }
 }
