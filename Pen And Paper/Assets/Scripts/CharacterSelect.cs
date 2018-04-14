@@ -147,9 +147,11 @@ public class CharacterSelect : MonoBehaviour
             {
                 if (inputA.ButtonX || inputA.ButtonA || inputA.ButtonB || inputA.ButtonY)
                 {
-                    this.confirmed = true;
-                    readyCheck.SetReady("A", true);
-                    GameObject.Find("Character Manager").GetComponent<CharacterManager>().characterPlayerA = this.currentSelection;
+                    if(this.currentSelection == 0 || this.currentSelection == 1) {
+                        this.confirmed = true;
+                        readyCheck.SetReady("A", true);
+                        GameObject.Find("Character Manager").GetComponent<CharacterManager>().characterPlayerA = this.currentSelection;
+                    }
                 }
 
                 this.userInputMovement += inputA.LeftStick;
@@ -158,9 +160,11 @@ public class CharacterSelect : MonoBehaviour
             {
                 if (inputB.ButtonX || inputB.ButtonCircle || inputB.ButtonTriangle || inputB.ButtonSquare)
                 {
-                    this.confirmed = true;
-                    readyCheck.SetReady("B", true);
-                    GameObject.Find("Character Manager").GetComponent<CharacterManager>().characterPlayerB = this.currentSelection;
+                    if(this.currentSelection == 0 || this.currentSelection == 1) {
+                        this.confirmed = true;
+                        readyCheck.SetReady("B", true);
+                        GameObject.Find("Character Manager").GetComponent<CharacterManager>().characterPlayerB = this.currentSelection;
+                    }
                 }
 
                 this.userInputMovement += inputB.LeftStick;
