@@ -152,11 +152,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114476198282876462, guid: aa99329b19fd72843b60732ce4fd1dc5,
-        type: 2}
-      propertyPath: PenBreakingLimit
-      value: 6
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aa99329b19fd72843b60732ce4fd1dc5, type: 2}
   m_IsPrefabParent: 0
