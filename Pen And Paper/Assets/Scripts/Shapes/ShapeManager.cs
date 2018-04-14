@@ -8,6 +8,8 @@ public class ShapeManager : Singleton<ShapeManager>
     private int currShapeIndex;
     private GameObject currShape;
 
+    public bool PenIsOnPaper { get; set; }
+
     private void Start()
     {
         currShapeIndex = 0;
@@ -26,5 +28,15 @@ public class ShapeManager : Singleton<ShapeManager>
         {
             //Game is completed!!
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        PenIsOnPaper = true;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        PenIsOnPaper = false;
     }
 }
