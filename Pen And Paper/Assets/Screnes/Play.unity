@@ -3653,9 +3653,22 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6d46a3052c232084a9b92a0474f2749e, type: 2}
+<<<<<<< HEAD
     - target: {fileID: 114476198282876462, guid: aa99329b19fd72843b60732ce4fd1dc5,
         type: 2}
       propertyPath: DisableShakes
+=======
+    - target: {fileID: 4090568375307952, guid: aa99329b19fd72843b60732ce4fd1dc5, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4842910742647068, guid: aa99329b19fd72843b60732ce4fd1dc5, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844077743369430, guid: aa99329b19fd72843b60732ce4fd1dc5, type: 2}
+      propertyPath: m_RootOrder
+>>>>>>> 541f2702685ad81bd860c05d779c50ffb4090c69
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
