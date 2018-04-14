@@ -149,6 +149,7 @@ public class CharacterSelect : MonoBehaviour
                 {
                     this.confirmed = true;
                     readyCheck.SetReady("A", true);
+                    GameObject.Find("Character Manager").GetComponent<CharacterManager>().characterPlayerA = this.currentSelection;
                 }
 
                 this.userInputMovement += inputA.LeftStick;
@@ -159,6 +160,7 @@ public class CharacterSelect : MonoBehaviour
                 {
                     this.confirmed = true;
                     readyCheck.SetReady("B", true);
+                    GameObject.Find("Character Manager").GetComponent<CharacterManager>().characterPlayerB = this.currentSelection;
                 }
 
                 this.userInputMovement += inputB.LeftStick;
