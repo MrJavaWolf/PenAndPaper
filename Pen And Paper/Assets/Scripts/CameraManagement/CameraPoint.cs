@@ -12,16 +12,40 @@ public class CameraPoint : MonoBehaviour
     private bool Attached;
     private Sequence sequence;
 
+    private Vector3 startPosition;
+    private Quaternion startRotation;
+
     public void MountCamera(Transform cam)
     {
+        cam.parent = null;
+        float value = 0;
+        DOTween.To(() => value, (v) =>
+         {
+             value = v;
+             var direction = (transform.position - startPosition).normalized;
+             var totalDistance = (startPosition - transform.position).sqrMagnitude;
+             var wantedPosition = startPosition + direction * totalDistance * value;
+             cam.position = wantedPosition;
 
-        cam.transform.position = transform.position;
-        cam.transform.SetParent(transform);
+         }, 1, 2)
+         .OnComplete(() =>
+         {
+             cam.transform.LookAt(lookPoint);
+             cam.transform.SetParent(transform);
+         })
+         .SetEase(Ease.InOutCubic);
+
+
+
+
+        timer = Duration;
+        Attached = true;
         cam.transform.LookAt(lookPoint);
 
         timer = Duration;
         Attached = true;
     }
+
 
     private void Update()
     {

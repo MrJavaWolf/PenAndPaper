@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PaperController : Singleton<PaperController>
 {
+    public bool DisableShakes = false;
     public HandObject LeftHand;
     public HandObject RightHand;
     public Transform Paper;
@@ -80,10 +81,11 @@ public class PaperController : Singleton<PaperController>
 
     private void UpdateHand(HandObject hand, Vector2 userInput)
     {
-        var handMovement =
-            //userInput.x * hand.Hand.right * hand.UserInputVerticalSpeed * Time.deltaTime +
-            userInput.y * hand.Hand.up * hand.UserInputVerticalSpeed * Time.deltaTime +
-            hand.Hand.up * hand.BaseVerticalSpeed * Time.deltaTime +
+        var handMovement = userInput.y * hand.Hand.up * hand.UserInputVerticalSpeed * Time.deltaTime;
+        //userInput.x * hand.Hand.right * hand.UserInputVerticalSpeed * Time.deltaTime
+
+        if (!DisableShakes)
+            handMovement += hand.Hand.up * hand.BaseVerticalSpeed * Time.deltaTime +
             hand.Hand.up * UnityEngine.Random.Range(-0.9f, 1) * hand.VerticalShakiness * Time.deltaTime;
         hand.Hand.position += handMovement;
     }
