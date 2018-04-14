@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PaperController : MonoBehaviour
+public class PaperController : Singleton<PaperController>
 {
     public HandObject LeftHand;
     public HandObject RightHand;
