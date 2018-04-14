@@ -18,6 +18,7 @@ public class PencilBrokeScript : Singleton<PencilBrokeScript>
     public AnimationCurve PartsFlyCurve;
     public AudioClip PenBreakAudio;
     public AudioClip PenTipBreakAudio;
+    public ParticleSystem PenTipBreakEffect;
 
     public AudioSource AudioPlayer;
     public void Play(Action onDone)
@@ -29,10 +30,13 @@ public class PencilBrokeScript : Singleton<PencilBrokeScript>
     {
         PlayCamera.Instance.transform.position = PenTip.position + CameraOffsetTipView;
         PlayCamera.Instance.transform.LookAt(PenTip.position);
+        PenTipBreakEffect.transform.position = PenTip.position - PenTipBreakEffect.transform.forward * 0.3f;
+        PenTipBreakEffect.transform.LookAt(PenTipBreakEffect.transform.position - PenTipBreakEffect.transform.forward);
 
         Pen.transform.position = new Vector3(Pen.transform.position.x, Pen.transform.position.y, -3f);
         Pen.DOMove(Pen.transform.position + Pen.transform.forward * 0.3f, 0.2f);
         yield return new WaitForSeconds(0.2f);
+        PenTipBreakEffect.Play();
 
         AudioPlayer.PlayOneShot(PenTipBreakAudio);
         PenTip.DOMove(PenTip.position + Vector3.up * 0.2f - PenTip.transform.forward * 0.2f, 0.1f)
