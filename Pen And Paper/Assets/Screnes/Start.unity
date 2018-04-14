@@ -140,6 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b32349b821107480db5030f39bf234b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: Character Select
 --- !u!4 &14938693
 Transform:
   m_ObjectHideFlags: 0
@@ -764,6 +765,10 @@ Prefab:
       propertyPath: m_ReceiveShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 6d972ed891aca48b3ae258509694e959, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ab4def2a4d5d44788a44260ffcd058ff, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d972ed891aca48b3ae258509694e959, type: 3}
   m_IsPrefabParent: 0
