@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ReadyCheck : MonoBehaviour {
 	public bool readyA = false;
@@ -18,9 +19,14 @@ public class ReadyCheck : MonoBehaviour {
 
 	public void SetReady(string playerLetter, bool state) {
       if(playerLetter == "A") {
-
+		  this.readyA = true;
 	  } else {
-
+		  this.readyB = true;
 	  }
+
+	  if(this.readyA && this.readyB) {
+		  SceneManager.LoadScene("Play");
+	  }
+
 	}
 }
