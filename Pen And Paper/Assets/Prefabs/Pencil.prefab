@@ -398,7 +398,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1917267179793096}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -7.4}
+  m_LocalPosition: {x: 0, y: 0, z: -7.41}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4667000097138388}
@@ -728,6 +728,7 @@ MonoBehaviour:
   BaseSpeed: 0
   HorizontalShakiness: 0
   VerticalShakiness: 0
+  MovmentBias: 1
 --- !u!114 &114904323233608602
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -740,6 +741,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookPoint: {fileID: 4017989436612318}
+  Duration: 5
+  HasTween: 0
 --- !u!135 &135322806951985190
 SphereCollider:
   m_ObjectHideFlags: 1

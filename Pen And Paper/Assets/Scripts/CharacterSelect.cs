@@ -18,6 +18,9 @@ public class CharacterSelect : MonoBehaviour
 
     private ReadyCheck readyCheck;
 
+    private GameObject avatarsA;
+    private GameObject avatarsB;
+
     // Use this for initialization
     void Start()
     {
@@ -25,9 +28,30 @@ public class CharacterSelect : MonoBehaviour
         inputA = InputController.Instance.GetXBoxInput();
         inputB = InputController.Instance.GetPs4Input();
 
+        avatarsA = GameObject.Find("Character Avatars 1");
+        avatarsB = GameObject.Find("Character Avatars 2");
+
         userInputMovement = Vector2.zero;
 
         readyCheck = GameObject.Find("Ready Check").GetComponent<ReadyCheck>();
+
+        HideAllAvatars("A");
+        HideAllAvatars("B");
+    }
+
+    void HideAllAvatars(string characterRole) {
+        GameObject avatars;
+
+        if(characterRole == "A") {
+            avatars = avatarsA;
+        } else {
+            avatars = avatarsB;
+        }
+
+        foreach(Transform child in avatars.transform) {
+            SpriteRenderer sprite = child.gameObject.GetComponent<SpriteRenderer>();
+            sprite.enabled = false;
+        }
     }
 
     void Left()
@@ -67,6 +91,40 @@ public class CharacterSelect : MonoBehaviour
         GameObject box = transform.Find("Character " + boxNo).gameObject;
         CharacterBox characterBox = box.GetComponent<CharacterBox>();
         characterBox.Toggle(isOn);
+        UpdateSelectedAvatar();
+    }
+
+    void UpdateSelectedAvatar() {
+        string characterName = "Unknown";
+        switch(this.currentSelection) {
+            case 1:
+                characterName = "Brute";
+            break;
+            case 2:
+                characterName = "Feme";
+            break;
+        }
+
+        this.HideAllAvatars(this.CharacterRole());
+
+        GameObject avatars;
+
+        if(this.CharacterRole() == "A") {
+            avatars = this.avatarsA;
+        } else {
+            avatars = this.avatarsB;
+        }
+
+        SpriteRenderer sprite = avatars.transform.Find(characterName).GetComponent<SpriteRenderer>();
+        sprite.enabled = true;
+    }
+
+    string CharacterRole() {
+        if(this.firstPlayer) {
+            return "A";
+        } else {
+            return "B";
+        }
     }
 
     // Update is called once per frame
