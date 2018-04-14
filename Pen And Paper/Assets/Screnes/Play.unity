@@ -350,11 +350,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4834582601828424, guid: c91cbc86138d5fb4d9e757ab9839e6ca,
     type: 2}
   m_PrefabInternal: {fileID: 1440737422}
---- !u!4 &1202339622 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4017989436612318, guid: c91cbc86138d5fb4d9e757ab9839e6ca,
-    type: 2}
-  m_PrefabInternal: {fileID: 1440737422}
 --- !u!1 &1349584291
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,7 +360,6 @@ GameObject:
   - component: {fileID: 1349584293}
   - component: {fileID: 1349584292}
   - component: {fileID: 1349584294}
-  - component: {fileID: 1349584295}
   - component: {fileID: 1349584296}
   m_Layer: 0
   m_Name: SceneController
@@ -439,42 +433,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &1349584295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1349584291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3c640b6288544740a931b6adf9c8005, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DontDestroyOnLoadConfig: 0
-  RightHand: {fileID: 210218421}
-  LeftHand: {fileID: 1699779450}
-  Pen: {fileID: 1483974833}
-  CameraOffset: {x: 0, y: 5, z: 8}
-  PenMovement:
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
-    - time: 0.07132928
-      value: 0.95487654
-      inSlope: 0.09006189
-      outSlope: 0.09006189
-      tangentMode: 0
-    - time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
 --- !u!114 &1349584296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -488,14 +446,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DontDestroyOnLoadConfig: 0
   CameraOffsetTipView: {x: 1, y: 1.5, z: -2}
-  CameraOffsetPencilView: {x: 1, y: 2, z: -10}
+  CameraOffsetPencilView: {x: 4, y: 4, z: -7}
+  Pen: {fileID: 1483974833}
   PenTip: {fileID: 1149047257}
   PenParts:
   - {fileID: 1751142634}
   - {fileID: 853379875}
   - {fileID: 1658415759}
   - {fileID: 1174405367}
-  - {fileID: 1202339622}
   PartsFlyCurve:
     serializedVersion: 2
     m_Curve:
@@ -536,7 +494,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4921558554708094, guid: c91cbc86138d5fb4d9e757ab9839e6ca, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -7.4
+      value: -6.4
       objectReference: {fileID: 0}
     - target: {fileID: 4921558554708094, guid: c91cbc86138d5fb4d9e757ab9839e6ca, type: 2}
       propertyPath: m_LocalRotation.x
