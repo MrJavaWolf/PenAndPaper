@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PaperController : MonoBehaviour
+public class PaperController : Singleton<PaperController>
 {
     public HandObject LeftHand;
     public HandObject RightHand;
@@ -19,7 +19,7 @@ public class PaperController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var input = InputController.Instance.GetXBoxInput();
+        var input = InputController.Instance.GetPs4Input();
         UpdateHand(LeftHand, input.LeftStick);
         UpdateHand(RightHand, input.RightStick);
         if (WillPaperRip())
