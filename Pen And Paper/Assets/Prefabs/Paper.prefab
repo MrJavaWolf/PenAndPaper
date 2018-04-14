@@ -971,11 +971,11 @@ MonoBehaviour:
     Hand: {fileID: 4844077743369430}
     UserInputVerticalSpeed: 2
     BaseVerticalSpeed: -0.5
-    VerticalShakiness: 0.3
+    VerticalShakiness: 1
   RightHand:
     Hand: {fileID: 4842910742647068}
     UserInputVerticalSpeed: 2
     BaseVerticalSpeed: 0.2
-    VerticalShakiness: 0.5
+    VerticalShakiness: 1
   Paper: {fileID: 4090568375307952}
-  PaperRipDistance: 5
+  PaperRipDistance: 3
