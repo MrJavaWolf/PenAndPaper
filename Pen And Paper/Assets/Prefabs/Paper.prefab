@@ -127,6 +127,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1772297751120166
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4858457751416464}
+  - component: {fileID: 114312665201007552}
+  m_Layer: 0
+  m_Name: CamPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1870858688174644
 GameObject:
   m_ObjectHideFlags: 1
@@ -287,6 +303,7 @@ Transform:
   m_Children:
   - {fileID: 4368501156452436}
   - {fileID: 4127043564503524}
+  - {fileID: 4858457751416464}
   m_Father: {fileID: 4012200358223050}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -440,6 +457,19 @@ Transform:
   - {fileID: 4016174834272926}
   m_Father: {fileID: 4012200358223050}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4858457751416464
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1772297751120166}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.196, y: 0.1116, z: -3.55}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4090568375307952}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23079543336422458
 MeshRenderer:
@@ -897,6 +927,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114312665201007552
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1772297751120166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e21642e4f36ad46944ae08f95158c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookPoint: {fileID: 4090568375307952}
+  Duration: 5
 --- !u!114 &114429128998094924
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -928,11 +971,11 @@ MonoBehaviour:
     Hand: {fileID: 4844077743369430}
     UserInputVerticalSpeed: 2
     BaseVerticalSpeed: -0.5
-    VerticalShakiness: 0.3
+    VerticalShakiness: 1
   RightHand:
     Hand: {fileID: 4842910742647068}
     UserInputVerticalSpeed: 2
     BaseVerticalSpeed: 0.2
-    VerticalShakiness: 0.5
+    VerticalShakiness: 1
   Paper: {fileID: 4090568375307952}
-  PaperRipDistance: 5
+  PaperRipDistance: 3

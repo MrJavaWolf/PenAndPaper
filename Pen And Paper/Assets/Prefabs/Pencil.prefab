@@ -11,6 +11,22 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1917267179793096}
   m_IsPrefabParent: 1
+--- !u!1 &1112183236430258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4265986495042876}
+  - component: {fileID: 114904323233608602}
+  m_Layer: 0
+  m_Name: PencilCamPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1379361965465868
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,6 +238,19 @@ Transform:
   m_Father: {fileID: 4276290568697550}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4265986495042876
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1112183236430258}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.439, y: 0, z: 0.69}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4921558554708094}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4276290568697550
 Transform:
   m_ObjectHideFlags: 1
@@ -373,6 +402,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4667000097138388}
+  - {fileID: 4265986495042876}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -694,11 +724,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DontDestroyOnLoadConfig: 0
   Tip: {fileID: 1769216257081420}
-  MovementSpeed: 1
-  BaseSpeed: 0.5
-  HorizontalShakiness: 1
-  VerticalShakiness: 1
-  MovmentBias: 1
+  MovementSpeed: 2
+  BaseSpeed: 0
+  HorizontalShakiness: 0
+  VerticalShakiness: 0
+--- !u!114 &114904323233608602
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1112183236430258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e21642e4f36ad46944ae08f95158c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookPoint: {fileID: 4017989436612318}
 --- !u!135 &135322806951985190
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -48,8 +48,6 @@ public class ShapeController : MonoBehaviour
 
         }
 
-        Debug.Log(isDrawingInside);
-
         //Instantiate new points
         if (recordedPositions.Count > 0 && LastIndex + 1 < recordedPositions.Count)
         {
