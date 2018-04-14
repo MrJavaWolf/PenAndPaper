@@ -245,7 +245,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1202913906
+  randomSeed: 2095878998
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3653,6 +3653,11 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6d46a3052c232084a9b92a0474f2749e, type: 2}
+    - target: {fileID: 114476198282876462, guid: aa99329b19fd72843b60732ce4fd1dc5,
+        type: 2}
+      propertyPath: DisableShakes
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aa99329b19fd72843b60732ce4fd1dc5, type: 2}
   m_IsPrefabParent: 0
@@ -4105,7 +4110,7 @@ MonoBehaviour:
   DontDestroyOnLoadConfig: 0
   CameraOffsetTipView: {x: 1, y: 1.5, z: -2}
   CameraOffsetPencilView: {x: 4, y: 4, z: -7}
-  Pen: {fileID: 0}
+  Pen: {fileID: 1440737424}
   PenTip: {fileID: 1149047257}
   PenParts:
   - {fileID: 1751142634}
@@ -4176,7 +4181,7 @@ Prefab:
     - target: {fileID: 114292374478024262, guid: c91cbc86138d5fb4d9e757ab9839e6ca,
         type: 2}
       propertyPath: DisableShakes
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c91cbc86138d5fb4d9e757ab9839e6ca, type: 2}
@@ -4184,6 +4189,11 @@ Prefab:
 --- !u!4 &1440737423 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4667000097138388, guid: c91cbc86138d5fb4d9e757ab9839e6ca,
+    type: 2}
+  m_PrefabInternal: {fileID: 1440737422}
+--- !u!4 &1440737424 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4921558554708094, guid: c91cbc86138d5fb4d9e757ab9839e6ca,
     type: 2}
   m_PrefabInternal: {fileID: 1440737422}
 --- !u!1 &1521013052
