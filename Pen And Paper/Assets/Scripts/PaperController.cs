@@ -29,6 +29,7 @@ public class PaperController : Singleton<PaperController>
         else
         {
             UpdatePaperRotation();
+            UpdatePaperPosition();
         }
     }
 
@@ -43,7 +44,12 @@ public class PaperController : Singleton<PaperController>
         Quaternion rotation = Quaternion.LookRotation(direction, Vector3.up);
         rotation *= Quaternion.Euler(0, 90, 0);
         Paper.transform.rotation = rotation;
+    }
 
+    private void UpdatePaperPosition()
+    {
+        var yPos = LeftHand.Hand.position.y + RightHand.Hand.position.y / 2;
+        Paper.transform.position = new Vector3(Paper.transform.position.x, yPos, Paper.transform.position.z);
     }
 
     private void UpdateHand(HandObject hand, Vector2 userInput)
