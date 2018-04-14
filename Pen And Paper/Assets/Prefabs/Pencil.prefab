@@ -37,6 +37,7 @@ GameObject:
   - component: {fileID: 4667000097138388}
   - component: {fileID: 54361244028986318}
   - component: {fileID: 135322806951985190}
+  - component: {fileID: 114961625905024002}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -743,6 +744,22 @@ MonoBehaviour:
   lookPoint: {fileID: 4017989436612318}
   Duration: 5
   HasTween: 0
+--- !u!114 &114961625905024002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1379361965465868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6abfcea31ac939e4b9eaa3ad00e4ef8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioEvent:
+    Events:
+    - Event: {fileID: 114888949125452662, guid: ded889cc89bc7d142bdbf65ee27ae33f,
+        type: 2}
+      PostAt: 0
 --- !u!135 &135322806951985190
 SphereCollider:
   m_ObjectHideFlags: 1
