@@ -7,7 +7,7 @@ public class CharacterBox : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-      this.initialPosition = transform.position;
+      this.initialPosition = transform.localPosition;
 		
 	}
 	
@@ -18,9 +18,9 @@ public class CharacterBox : MonoBehaviour {
 
 	public void Toggle (bool isOn) {
 		if(isOn == true) {
-			transform.position = this.initialPosition - new Vector3(0, 0, 0.75f);
+			transform.localPosition = this.initialPosition - new Vector3(0, 0, 0.75f);
 		} else {
-			transform.position = this.initialPosition;
+			transform.localPosition = this.initialPosition;
 		}
 
 	}
