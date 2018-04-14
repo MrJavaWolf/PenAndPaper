@@ -694,11 +694,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DontDestroyOnLoadConfig: 0
   Tip: {fileID: 1769216257081420}
-  MovementSpeed: 1
-  BaseSpeed: 0.5
-  HorizontalShakiness: 1
-  VerticalShakiness: 1
-  MovmentBias: 1
+  MovementSpeed: 2
+  BaseSpeed: 0.7
+  HorizontalShakiness: 1.5
+  VerticalShakiness: 1.5
+  MovmentBias: 1.5
 --- !u!135 &135322806951985190
 SphereCollider:
   m_ObjectHideFlags: 1
