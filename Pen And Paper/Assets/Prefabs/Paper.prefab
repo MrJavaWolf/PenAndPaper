@@ -922,7 +922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c79a19352a354746928eb8830ad6cd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementSpeed: 2
+  DontDestroyOnLoadConfig: 0
   LeftHand:
     Hand: {fileID: 4844077743369430}
     UserInputVerticalSpeed: 2
@@ -934,4 +934,4 @@ MonoBehaviour:
     BaseVerticalSpeed: 0.2
     VerticalShakiness: 0.5
   Paper: {fileID: 4090568375307952}
-  PaperRipDistance: 2
+  PaperRipDistance: 5

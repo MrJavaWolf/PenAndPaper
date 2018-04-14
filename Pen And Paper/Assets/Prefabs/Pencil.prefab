@@ -369,7 +369,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1917267179793096}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -7.41}
+  m_LocalPosition: {x: 0, y: 0, z: -7.4}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4667000097138388}
@@ -694,10 +694,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DontDestroyOnLoadConfig: 0
   Tip: {fileID: 1769216257081420}
-  MovementSpeed: 2
-  BaseSpeed: 0
-  HorizontalShakiness: 0
-  VerticalShakiness: 0
+  MovementSpeed: 1
+  BaseSpeed: 0.5
+  HorizontalShakiness: 1
+  VerticalShakiness: 1
+  MovmentBias: 2
 --- !u!135 &135322806951985190
 SphereCollider:
   m_ObjectHideFlags: 1
