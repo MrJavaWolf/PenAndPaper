@@ -6,6 +6,9 @@ public class PenController : Singleton<PenController>
 {
     public GameObject Tip;
     public float MovementSpeed = 2;
+    public float BaseSpeed = 0.3f;
+    public float HorizontalShakiness = 1;
+    public float VerticalShakiness = 1;
 
     public Vector3 GetTipPosition()
     {
@@ -15,8 +18,13 @@ public class PenController : Singleton<PenController>
     public void Update()
     {
         var input = InputController.Instance.GetPs4Input();
-        var movement = input.LeftStick.x * transform.forward * MovementSpeed * Time.deltaTime +
-            input.LeftStick.y * transform.up * MovementSpeed * Time.deltaTime;
+        var movement =
+            transform.forward * input.LeftStick.x * MovementSpeed * Time.deltaTime +
+            transform.up * input.LeftStick.y * MovementSpeed * Time.deltaTime +
+            transform.forward * BaseSpeed * Time.deltaTime +
+            transform.forward * Random.Range(-0.9f, 1) * HorizontalShakiness * Time.deltaTime +
+            transform.up * Random.Range(-0.9f, 1) * VerticalShakiness * Time.deltaTime;
+
         transform.position += movement;
     }
 }
