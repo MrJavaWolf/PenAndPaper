@@ -17,9 +17,10 @@ public class PenController : Singleton<PenController>
 
     public void Update()
     {
-        var input = InputController.Instance.GetPs4Input();
+        var input = InputController.Instance.GetXBoxInput();
         var movement =
-            transform.forward * input.LeftStick.x * MovementSpeed * Time.deltaTime +
+            transform.forward * input.RightStick.y * MovementSpeed * Time.deltaTime +
+            transform.right * input.LeftStick.x * MovementSpeed * Time.deltaTime +
             transform.up * input.LeftStick.y * MovementSpeed * Time.deltaTime +
             transform.forward * BaseSpeed * Time.deltaTime +
             transform.forward * Random.Range(-0.9f, 1) * HorizontalShakiness * Time.deltaTime +

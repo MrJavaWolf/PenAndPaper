@@ -26,8 +26,6 @@ public class LineController : ShapeController
         }
 
         var avg = distances.Average();
-        Debug.Log(avg);
-
         if (avg < Closeness)
             return true;
 

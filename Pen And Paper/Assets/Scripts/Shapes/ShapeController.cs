@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -9,6 +10,8 @@ public class ShapeController : MonoBehaviour
     public GameObject Line;
     public float DistanceBetweenLinePoints = .2f;
     public float LineThickness = .3f;
+    public float MinLineThickness = .1f;
+    public Color LineColor;
 
     protected List<DrawData> recordedPositions = new List<DrawData>();
     protected List<GameObject> spawnedObjects = new List<GameObject>();
@@ -50,16 +53,21 @@ public class ShapeController : MonoBehaviour
             for (int i = LastIndex; i < recordedPositions.Count; i++)
             {
                 var pos = recordedPositions[i].Pos;
+                var o = Instantiate(Line, new Vector3(pos.x, pos.y, -0.06f), Quaternion.identity, transform);
 
-                var o = Instantiate(Line, new Vector3(pos.x, pos.y, -0.06f), Quaternion.identity);
+                var normalizedCloseness = (GetPenDistance() / DrawDistance);
+                var invertedNormalizedCloseness = 1 - normalizedCloseness;
+                var scale = invertedNormalizedCloseness * LineThickness;
+                if (scale < MinLineThickness)
+                    scale = MinLineThickness;
 
-                if (recordedPositions[i].Inside)
-                    o.GetComponent<SpriteRenderer>().color = Color.green;
+                var currColor = new Color(
+                    LineColor.r * normalizedCloseness,
+                    LineColor.g * normalizedCloseness,
+                    LineColor.b * normalizedCloseness,
+                    1);
 
-                else
-                    o.GetComponent<SpriteRenderer>().color = Color.red;
-
-                var scale = (1 - (GetPenDistance() / DrawDistance)) * LineThickness;
+                o.GetComponent<SpriteRenderer>().color = currColor;
                 o.transform.localScale = new Vector3(scale, scale);
             }
 
@@ -72,10 +80,9 @@ public class ShapeController : MonoBehaviour
             ShapeManager.Instance.GetNextShape();
         }
 
-        //Check for game over
-        if (GetPenDistance() < BreakDistance)
+        if (PenController.Instance.GetTipPosition().z > 0)
         {
-            //Break the paper
+            ShapeManager.Instance.PuncturePaper();
         }
     }
 
