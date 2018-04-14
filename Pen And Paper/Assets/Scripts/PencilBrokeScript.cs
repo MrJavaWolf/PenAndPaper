@@ -1,4 +1,5 @@
 ﻿using DG.Tweening;
+using EZCameraShake;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -24,7 +25,9 @@ public class PencilBrokeScript : Singleton<PencilBrokeScript>
     {
         Camera.main.transform.position = PenTip.position + CameraOffsetTipView;
         Camera.main.transform.LookAt(PenTip.position);
-        yield return new WaitForSeconds(1);
+
+        CameraShaker.Instance.ShakeOnce(1, 5, 2, 0.1f);
+        yield return new WaitForSeconds(2.5f);
         PenTip.DOMove(PenTip.position + PenTip.up * 0.1f, 0.05f);
         PenTip.DORotateQuaternion(PenTip.rotation * Quaternion.Euler(new Vector3(-125, 0, 0)), 0.05f);
         yield return new WaitForSeconds(1.5f);
