@@ -902,7 +902,7 @@ MonoBehaviour:
   MinLineThickness: 0.05
   LineColor: {r: 0.64705884, g: 0.64705884, b: 0.64705884, a: 1}
   positions: []
-  Closeness: 0.1
+  Closeness: 0.2
 --- !u!114 &114728304527320974
 MonoBehaviour:
   m_ObjectHideFlags: 1
