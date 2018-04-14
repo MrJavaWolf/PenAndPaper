@@ -77,13 +77,12 @@ public class ShapeController : MonoBehaviour
         //Check for shape filled
         if (IsShapeFilled())
         {
-            Debug.Log("Yeas");
             ShapeManager.Instance.GetNextShape();
         }
 
         if (PenController.Instance.GetTipPosition().z > 0)
         {
-            ShapeManager.Instance.PaperBreak();
+            ShapeManager.Instance.PuncturePaper();
         }
     }
 

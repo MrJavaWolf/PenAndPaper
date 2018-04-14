@@ -44,7 +44,7 @@ public class ShapeManager : Singleton<ShapeManager>
         PenIsOnPaper = false;
     }
 
-    public void PaperBreak()
+    public void PuncturePaper()
     {
         if(PaperPunctured != null) PaperPunctured();
     }
