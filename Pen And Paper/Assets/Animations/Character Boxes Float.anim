@@ -23,19 +23,19 @@ AnimationClip:
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       - serializedVersion: 2
-        time: 1.3
-        value: {x: 0, y: 10.033536, z: 0}
-        inSlope: {x: 0, y: 3.3715227, z: 0}
-        outSlope: {x: 0, y: 3.3715227, z: 0}
+        time: 2.7
+        value: {x: 0, y: 6.2393827, z: 0}
+        inSlope: {x: 0, y: 15.035771, z: 0}
+        outSlope: {x: 0, y: 15.035771, z: 0}
         tangentMode: 0
       - serializedVersion: 2
-        time: 2.6666667
-        value: {x: 0, y: -13.50126, z: 0}
-        inSlope: {x: 0, y: 1.2124509, z: 0}
-        outSlope: {x: 0, y: 1.2124509, z: 0}
+        time: 3.8166666
+        value: {x: 0, y: -3.153573, z: 0}
+        inSlope: {x: 0, y: 13.1414385, z: 0}
+        outSlope: {x: 0, y: 13.1414385, z: 0}
         tangentMode: 0
       - serializedVersion: 2
-        time: 3.9333334
+        time: 6.2833333
         value: {x: 0, y: 0.0000044107437, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -68,7 +68,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 3.9333334
+    m_StopTime: 6.2833333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -110,19 +110,19 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 1.3
-        value: 10.033536
-        inSlope: 3.3715227
-        outSlope: 3.3715227
+        time: 2.7
+        value: 6.2393827
+        inSlope: 15.035771
+        outSlope: 15.035771
         tangentMode: 0
       - serializedVersion: 2
-        time: 2.6666667
-        value: -13.50126
-        inSlope: 1.2124509
-        outSlope: 1.2124509
+        time: 3.8166666
+        value: -3.153573
+        inSlope: 13.1414385
+        outSlope: 13.1414385
         tangentMode: 0
       - serializedVersion: 2
-        time: 3.9333334
+        time: 6.2833333
         value: 0.0000044107437
         inSlope: 0
         outSlope: 0
