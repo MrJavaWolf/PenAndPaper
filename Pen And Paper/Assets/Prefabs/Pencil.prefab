@@ -37,6 +37,7 @@ GameObject:
   - component: {fileID: 33221815196768696}
   - component: {fileID: 136213871399112640}
   - component: {fileID: 23661382245010196}
+  - component: {fileID: 54361244028986318}
   m_Layer: 0
   m_Name: Pencil
   m_TagString: Untagged
@@ -53,7 +54,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4921558554708094}
   - component: {fileID: 114292374478024262}
-  - component: {fileID: 54361244028986318}
   m_Layer: 0
   m_Name: Pencil
   m_TagString: Untagged
