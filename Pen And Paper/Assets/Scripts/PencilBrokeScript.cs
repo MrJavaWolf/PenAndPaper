@@ -16,7 +16,10 @@ public class PencilBrokeScript : Singleton<PencilBrokeScript>
     public Transform PenTip;
     public Transform[] PenParts;
     public AnimationCurve PartsFlyCurve;
+    public AudioClip PenBreakAudio;
+    public AudioClip PenTipBreakAudio;
 
+    public AudioSource AudioPlayer;
     public void Play(Action onDone)
     {
         StartCoroutine(PlaySequence(onDone));
@@ -31,6 +34,7 @@ public class PencilBrokeScript : Singleton<PencilBrokeScript>
         Pen.DOMove(Pen.transform.position + Pen.transform.forward * 0.3f, 0.2f);
         yield return new WaitForSeconds(0.2f);
 
+        AudioPlayer.PlayOneShot(PenTipBreakAudio);
         PenTip.DOMove(PenTip.position + Vector3.up * 0.2f - PenTip.transform.forward * 0.2f, 0.1f)
             .OnComplete(() =>
             {
@@ -49,6 +53,8 @@ public class PencilBrokeScript : Singleton<PencilBrokeScript>
         PlayCamera.Instance.transform.LookAt(PenTip.position);
 
         yield return new WaitForSeconds(0.6f);
+        AudioPlayer.PlayOneShot(PenBreakAudio);
+
         for (int i = 0; i < PenParts.Length; i++)
         {
             var penPart = PenParts[i];
