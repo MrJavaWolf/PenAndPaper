@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// Add this script to a gameobject and call the methods.
 /// </summary>
-public class InputController : MonoBehaviour
+public class InputController : Singleton<InputController>
 {
     private const string XBox_Stick_Left_Horizontal = "XBox_Stick_Left_Horizontal";
     private const string XBox_Stick_Left_Vertical = "XBox_Stick_Left_Vertical";
