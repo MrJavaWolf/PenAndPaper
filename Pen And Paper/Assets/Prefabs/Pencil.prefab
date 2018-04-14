@@ -726,10 +726,10 @@ MonoBehaviour:
   DontDestroyOnLoadConfig: 0
   Tip: {fileID: 1769216257081420}
   MovementSpeed: 2
-  BaseSpeed: 0
-  HorizontalShakiness: 0
-  VerticalShakiness: 0
-  MovmentBias: 0
+  BaseSpeed: 0.5
+  HorizontalShakiness: 1
+  VerticalShakiness: 1
+  MovmentBias: 1
 --- !u!114 &114904323233608602
 MonoBehaviour:
   m_ObjectHideFlags: 1

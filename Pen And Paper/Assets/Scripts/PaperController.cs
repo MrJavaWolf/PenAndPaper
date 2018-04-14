@@ -15,7 +15,7 @@ public class PaperController : Singleton<PaperController>
     public float PaperRipDistance = 3;
 
     public float PenBreakingLimit = 4;
-    
+
     /// <summary>
     /// Higher = Easiere to break
     /// </summary>
@@ -34,11 +34,15 @@ public class PaperController : Singleton<PaperController>
         var prevRightHandPostition = RightHand.Hand.position;
         UpdateHand(LeftHand, input.LeftStick);
         UpdateHand(RightHand, input.RightStick);
-
-        var distanceMoved = (Vector3.Distance(prevLeftHandPostition, LeftHand.Hand.position) +
+        var distanceMoved = 0f;
+        if (Time.deltaTime != 0)
+        {
+            distanceMoved = (Vector3.Distance(prevLeftHandPostition, LeftHand.Hand.position) +
              Vector3.Distance(prevRightHandPostition, RightHand.Hand.position) +
              (PenController.Instance.DistanceMoved * PenBreakingMultiplier)) /
               Mathf.Max(Time.deltaTime, 0.001f);
+            //Debug.Log("distanceMoved: " + distanceMoved);
+        }
 
         if (WillPaperRip())
         {

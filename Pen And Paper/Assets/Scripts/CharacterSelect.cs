@@ -35,8 +35,8 @@ public class CharacterSelect : MonoBehaviour
 
         readyCheck = GameObject.Find("Ready Check").GetComponent<ReadyCheck>();
 
-        HideAllAvatars("A");
-        HideAllAvatars("B");
+
+        this.Left();
     }
 
     void HideAllAvatars(string characterRole) {
@@ -97,10 +97,10 @@ public class CharacterSelect : MonoBehaviour
     void UpdateSelectedAvatar() {
         string characterName = "Unknown";
         switch(this.currentSelection) {
-            case 1:
+            case 0:
                 characterName = "Brute";
             break;
-            case 2:
+            case 1:
                 characterName = "Feme";
             break;
         }
@@ -110,8 +110,10 @@ public class CharacterSelect : MonoBehaviour
         GameObject avatars;
 
         if(this.CharacterRole() == "A") {
+            Debug.Log("Updating avatar for A");
             avatars = this.avatarsA;
         } else {
+            Debug.Log("Updating avatar for B");
             avatars = this.avatarsB;
         }
 
@@ -121,8 +123,10 @@ public class CharacterSelect : MonoBehaviour
 
     string CharacterRole() {
         if(this.firstPlayer) {
+            Debug.Log("Character role A");
             return "A";
         } else {
+            Debug.Log("Character role B");
             return "B";
         }
     }
