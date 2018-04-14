@@ -81,8 +81,7 @@ public class ShapeController : MonoBehaviour
             ShapeManager.Instance.GetNextShape();
         }
 
-        //Check for game over
-        if (GetPenDistance() < BreakDistance)
+        if (PenController.Instance.GetTipPosition().z > 0)
         {
             ShapeManager.Instance.PaperBreak();
         }
