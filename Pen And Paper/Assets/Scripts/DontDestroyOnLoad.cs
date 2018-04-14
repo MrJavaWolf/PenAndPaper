@@ -27,11 +27,11 @@ public class DontDestroyOnLoad : MonoBehaviour
         switch (arg0.name)
         {
             case "Play":
-                InAudio.PostEvent(gameObject, EnterMain);
+                InAudio.PostEvent(gameObject, EnterGame);
                 break;
 
             case "Start":
-                InAudio.PostEvent(gameObject, EnterGame);
+                InAudio.PostEvent(gameObject, EnterMain);
                 break;
 
             case "Finished Lost":
