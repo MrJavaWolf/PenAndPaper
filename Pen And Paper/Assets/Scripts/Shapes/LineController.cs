@@ -19,6 +19,9 @@ public class LineController : ShapeController
 
     protected override bool IsShapeFilled()
     {
+        if (recordedPositions.Count == 0)
+            return false;
+
         List<float> distances = new List<float>();
 
         foreach (var item in positions)
@@ -34,10 +37,12 @@ public class LineController : ShapeController
             distances.Add(closest);
         }
 
-        var avg = distances.Average();
-        if (avg < Closeness)
-            return true;
+        foreach (var item in distances)
+        {
+            if (item > Closeness)
+                return false;
+        }
 
-        return false;
+        return true;
     }
 }

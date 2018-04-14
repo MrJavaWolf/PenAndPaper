@@ -1026,3 +1026,5 @@ MonoBehaviour:
     VerticalShakiness: 1
   Paper: {fileID: 4090568375307952}
   PaperRipDistance: 3
+  PenBreakingLimit: 5
+  PenBreakingMultiplier: 25

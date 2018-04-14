@@ -13,14 +13,25 @@ public class PenController : Singleton<PenController>
 
     private Vector2 perlinNoiseCoordinate = Vector2.zero;
     public float DistanceMoved { get; private set; }
+
     public void Start()
     {
         perlinNoiseCoordinate = Vector2.one * Random.value * 100;
+        RandomPosition();
+
+        ShapeManager.Instance.NewShape += RandomPosition;
     }
 
     public Vector3 GetTipPosition()
     {
         return Tip.transform.position;
+    }
+
+    public void RandomPosition()
+    {
+        var x = Random.Range(-3, 3);
+        var y = Random.Range(-2, 2);
+        transform.position = new Vector3(x, y, -7);
     }
 
     public void Update()

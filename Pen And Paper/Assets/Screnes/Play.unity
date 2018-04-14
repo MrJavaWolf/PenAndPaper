@@ -203,6 +203,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114476198282876462, guid: aa99329b19fd72843b60732ce4fd1dc5,
+        type: 2}
+      propertyPath: PenBreakingLimit
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aa99329b19fd72843b60732ce4fd1dc5, type: 2}
   m_IsPrefabParent: 0
@@ -281,6 +286,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eecca23daa1cc4644be9470f49d3261d, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &853379875 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4812288861930882, guid: c91cbc86138d5fb4d9e757ab9839e6ca,
+    type: 2}
+  m_PrefabInternal: {fileID: 1440737422}
 --- !u!1 &883158441
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,6 +358,21 @@ Transform:
   m_PrefabParentObject: {fileID: 4127043564503524, guid: aa99329b19fd72843b60732ce4fd1dc5,
     type: 2}
   m_PrefabInternal: {fileID: 184360705}
+--- !u!4 &1149047257 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4276290568697550, guid: c91cbc86138d5fb4d9e757ab9839e6ca,
+    type: 2}
+  m_PrefabInternal: {fileID: 1440737422}
+--- !u!4 &1174405367 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4834582601828424, guid: c91cbc86138d5fb4d9e757ab9839e6ca,
+    type: 2}
+  m_PrefabInternal: {fileID: 1440737422}
+--- !u!4 &1202339622 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4017989436612318, guid: c91cbc86138d5fb4d9e757ab9839e6ca,
+    type: 2}
+  m_PrefabInternal: {fileID: 1440737422}
 --- !u!1 &1349584291
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,6 +384,7 @@ GameObject:
   - component: {fileID: 1349584292}
   - component: {fileID: 1349584294}
   - component: {fileID: 1349584295}
+  - component: {fileID: 1349584296}
   m_Layer: 0
   m_Name: SceneController
   m_TagString: Untagged
@@ -468,6 +494,45 @@ MonoBehaviour:
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!114 &1349584296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1349584291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de82df74608772a478a7e599713d91ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DontDestroyOnLoadConfig: 0
+  CameraOffsetTipView: {x: 1, y: 1.5, z: -2}
+  CameraOffsetPencilView: {x: 1, y: 2, z: -10}
+  PenTip: {fileID: 1149047257}
+  PenParts:
+  - {fileID: 1751142634}
+  - {fileID: 853379875}
+  - {fileID: 1658415759}
+  - {fileID: 1174405367}
+  - {fileID: 1202339622}
+  PartsFlyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
@@ -605,6 +670,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1658415759 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4429903329919820, guid: c91cbc86138d5fb4d9e757ab9839e6ca,
+    type: 2}
+  m_PrefabInternal: {fileID: 1440737422}
 --- !u!114 &1521013057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -648,6 +718,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4844077743369430, guid: aa99329b19fd72843b60732ce4fd1dc5,
     type: 2}
   m_PrefabInternal: {fileID: 184360705}
+--- !u!4 &1751142634 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4753655001197478, guid: c91cbc86138d5fb4d9e757ab9839e6ca,
+    type: 2}
+  m_PrefabInternal: {fileID: 1440737422}
 --- !u!1 &1770375915
 GameObject:
   m_ObjectHideFlags: 0

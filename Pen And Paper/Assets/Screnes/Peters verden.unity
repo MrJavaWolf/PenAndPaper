@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.18373369, g: 0.22913574, b: 0.3046835, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -236,27 +236,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4842910742647068, guid: aa99329b19fd72843b60732ce4fd1dc5,
     type: 2}
   m_PrefabInternal: {fileID: 184360705}
---- !u!1 &626763611 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1379361965465868, guid: c91cbc86138d5fb4d9e757ab9839e6ca,
-    type: 2}
-  m_PrefabInternal: {fileID: 1440737422}
---- !u!114 &626763615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 626763611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6abfcea31ac939e4b9eaa3ad00e4ef8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AudioEvent:
-    Events:
-    - Event: {fileID: 114888949125452662, guid: ded889cc89bc7d142bdbf65ee27ae33f,
-        type: 2}
-      PostAt: 0
 --- !u!1001 &816049098
 Prefab:
   m_ObjectHideFlags: 0
@@ -538,11 +517,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114292374478024262, guid: c91cbc86138d5fb4d9e757ab9839e6ca,
-        type: 2}
-      propertyPath: MovmentBias
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c91cbc86138d5fb4d9e757ab9839e6ca, type: 2}
   m_IsPrefabParent: 0
@@ -734,10 +708,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1770375915}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: 0.26238036, y: -0.24275936, z: 0.10149499, w: 0.9283982}
+  m_LocalPosition: {x: 0, y: 3, z: -9.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 32.443, y: -28.1, z: 4.149}
