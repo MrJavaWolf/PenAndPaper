@@ -12,7 +12,7 @@ public class PenController : Singleton<PenController>
     public float MovmentBias = 1;
 
     private Vector2 perlinNoiseCoordinate = Vector2.zero;
-
+    public float DistanceMoved { get; private set; }
     public void Start()
     {
         perlinNoiseCoordinate = Vector2.one * Random.value * 100;
@@ -37,7 +37,9 @@ public class PenController : Singleton<PenController>
             transform.forward * Random.Range(-0.9f, 1) * HorizontalShakiness * Time.deltaTime +
             transform.up * Random.Range(-0.9f, 1) * VerticalShakiness * Time.deltaTime;
 
+        DistanceMoved = movement.sqrMagnitude;
         transform.position += movement;
         perlinNoiseCoordinate.x += 0.5f * Time.deltaTime;
     }
+
 }
