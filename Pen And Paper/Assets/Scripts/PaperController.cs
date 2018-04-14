@@ -21,17 +21,17 @@ public class PaperController : MonoBehaviour
     void Update()
     {
         var input = InputController.Instance.GetXBoxInput();
-        UpdateHand(LeftHand, input.LeftStick);
-        UpdateHand(RightHand, input.RightStick);
-        if(WillPaperRip())
-        {
-            if (OnPaperRip != null) OnPaperRip(this, EventArgs.Empty);
-            Debug.Log("Paper RIP");
-        }
-        else
-        {
-            UpdatePaperRotation();
-        }
+        //UpdateHand(LeftHand, input.LeftStick);
+        //UpdateHand(RightHand, input.RightStick);
+        //if(WillPaperRip())
+        //{
+        //    if (OnPaperRip != null) OnPaperRip(this, EventArgs.Empty);
+        //    Debug.Log("Paper RIP");
+        //}
+        //else
+        //{
+        //    UpdatePaperRotation();
+        //}
     }
 
     private bool WillPaperRip()
@@ -46,7 +46,8 @@ public class PaperController : MonoBehaviour
 
     private void UpdateHand(HandObject hand, Vector2 userInput)
     {
-        var handMovement = userInput.x * hand.Hand.right * MovementSpeed * Time.deltaTime +
+        var handMovement = 
+            //userInput.x * hand.Hand.right * MovementSpeed * Time.deltaTime +
             userInput.y * hand.Hand.up * MovementSpeed * Time.deltaTime +
             hand.Hand.up * hand.BaseVerticalSpeed * Time.deltaTime +
             hand.Hand.up * UnityEngine.Random.Range(-0.9f, 1) * hand.VerticalShakiness * Time.deltaTime;
