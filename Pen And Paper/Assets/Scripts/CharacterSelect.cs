@@ -1,14 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+
 
 public class CharacterSelect : MonoBehaviour {
 	public int currentSelection = 0;
 	private bool confirmed = false; // Player selected a character
 
+	public bool firstPlayer = true;
+
+	private XBoxInput inputA;
+	private Ps4Input inputB;
+
+	private Vector2 moveA;
+	private Vector2 moveB;
+
+	private ReadyCheck readyCheck;
+
 	// Use this for initialization
 	void Start () {
 	  //this.MoveCursor(0);
+	  inputA = InputController.Instance.GetXBoxInput();
+	  inputB = InputController.Instance.GetPs4Input();
+
+	  moveA = Vector2.zero;
+
+	  readyCheck = GameObject.Find("Ready Check").GetComponent<ReadyCheck>();
 	}
 
 	void Left() {
@@ -45,7 +63,49 @@ public class CharacterSelect : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		float slowdown = 0.9f;
+		float treshold = 3.5f;
+
+
 		if(!confirmed) {
+			if(firstPlayer) {
+				if(inputA.ButtonX || inputA.ButtonA || inputA.ButtonB || inputA.ButtonY) {
+					this.confirmed = true;
+					readyCheck.SetReady("A", true);
+				}
+
+				this.moveA += inputA.LeftStick; 
+			} else {
+				if(inputB.ButtonX || inputB.ButtonCircle || inputB.ButtonTriangle || inputB.ButtonSquare) {
+					this.confirmed = true;
+					readyCheck.SetReady("B", true);
+				}
+
+				this.moveA += inputA.LeftStick; 
+			}
+
+			this.moveA *= slowdown;
+
+			if(this.moveA.x > treshold) {
+				this.Right();
+				this.moveA = Vector2.zero;
+			}
+
+			if(this.moveA.x < treshold * -1f) {
+				this.Left();
+				this.moveA = Vector2.zero;
+			}
+
+			if(this.moveA.y > treshold) {
+				this.Up();
+				this.moveA = Vector2.zero;
+			}
+
+			if(this.moveA.y < treshold * -1f) {
+				this.Down();
+				this.moveA = Vector2.zero;
+			}
+
 			if(Input.GetKeyUp(KeyCode.RightArrow)) {
 				this.Right();
 			}

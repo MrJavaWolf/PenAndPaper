@@ -45,7 +45,10 @@ public class ShapeController : MonoBehaviour
                    PenController.Instance.transform.position,
                    isDrawingInside));
             }
+
         }
+
+        Debug.Log(isDrawingInside);
 
         //Instantiate new points
         if (recordedPositions.Count > 0 && LastIndex + 1 < recordedPositions.Count)
@@ -100,12 +103,12 @@ public class ShapeController : MonoBehaviour
         }
     }
 
-    protected void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         isDrawingInside = true;
     }
 
-    protected void OnTriggerExit(Collider other)
+    public void OnTriggerExit(Collider other)
     {
         isDrawingInside = false;
     }
