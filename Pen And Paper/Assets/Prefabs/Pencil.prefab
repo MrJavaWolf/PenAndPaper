@@ -698,7 +698,7 @@ MonoBehaviour:
   BaseSpeed: 0.5
   HorizontalShakiness: 1
   VerticalShakiness: 1
-  MovmentBias: 2
+  MovmentBias: 1
 --- !u!135 &135322806951985190
 SphereCollider:
   m_ObjectHideFlags: 1
