@@ -30,7 +30,7 @@ public class ShapeManager : Singleton<ShapeManager>
         }
         else
         {
-            //GameEnded.Invoke();
+            if(GameEnded!= null) GameEnded();
         }
     }
 
@@ -46,6 +46,6 @@ public class ShapeManager : Singleton<ShapeManager>
 
     public void PaperBreak()
     {
-        PaperPunctured.Invoke();
+        if(PaperPunctured != null) PaperPunctured();
     }
 }
