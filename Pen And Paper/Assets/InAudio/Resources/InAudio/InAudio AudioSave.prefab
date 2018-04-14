@@ -59,16 +59,12 @@ GameObject:
   - component: {fileID: 114157237447966976}
   - component: {fileID: 114813855833361822}
   - component: {fileID: 114470098562324390}
-  - component: {fileID: 114251341011481240}
-  - component: {fileID: 114754682306946192}
   - component: {fileID: 114834863394525056}
   - component: {fileID: 114602408620308272}
   - component: {fileID: 114191343399808360}
   - component: {fileID: 114930553714107260}
   - component: {fileID: 114198488051594810}
   - component: {fileID: 114050928750699236}
-  - component: {fileID: 114109019316228330}
-  - component: {fileID: 114785316302539504}
   - component: {fileID: 114917412133703302}
   - component: {fileID: 114143799815157732}
   - component: {fileID: 114455750600517056}
@@ -235,7 +231,7 @@ MonoBehaviour:
   MixerGroup: {fileID: 0}
   _children: []
   Filtered: 0
-  FoldedOut: 0
+  FoldedOut: 1
   ScrollPosition: {x: 0, y: 0}
 --- !u!114 &114044104691305592
 MonoBehaviour:
@@ -367,7 +363,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _clip: {fileID: 0}
+  _clip: {fileID: 8300000, guid: bacac8df731025645bf5312841ce31ba, type: 3}
   LoadedFromAssetBundle: 0
 --- !u!114 &114090952816501734
 MonoBehaviour:
@@ -435,28 +431,6 @@ MonoBehaviour:
     m_RotationOrder: 4
   _clip: {fileID: 8300000, guid: 5530daf4d79ae4a46836a94487788b67, type: 3}
   LoadedFromAssetBundle: 0
---- !u!114 &114109019316228330
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1157775257787552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19242b74995c0e44a8799397a6b0059a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _guid: 1761810058
-  _type: 2
-  _nodeData: {fileID: 114785316302539504}
-  Name: Struggle 2
-  _parent: {fileID: 114191343399808360}
-  OverrideParentMixerGroup: 0
-  MixerGroup: {fileID: 0}
-  _children: []
-  Filtered: 0
-  FoldedOut: 0
-  ScrollPosition: {x: 0, y: 0}
 --- !u!114 &114122392941087282
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -838,10 +812,9 @@ MonoBehaviour:
   MixerGroup: {fileID: 0}
   _children:
   - {fileID: 114198488051594810}
-  - {fileID: 114109019316228330}
   - {fileID: 114917412133703302}
   Filtered: 0
-  FoldedOut: 0
+  FoldedOut: 1
   ScrollPosition: {x: 0, y: 0}
 --- !u!114 &114198488051594810
 MonoBehaviour:
@@ -931,28 +904,6 @@ MonoBehaviour:
     m_RotationOrder: 4
   weights: 320000003200000032000000
   doNotRepeat: 1
---- !u!114 &114251341011481240
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1157775257787552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19242b74995c0e44a8799397a6b0059a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _guid: 1565520668
-  _type: 2
-  _nodeData: {fileID: 114754682306946192}
-  Name: Struggle 2
-  _parent: {fileID: 114444516199458478}
-  OverrideParentMixerGroup: 0
-  MixerGroup: {fileID: 0}
-  _children: []
-  Filtered: 0
-  FoldedOut: 0
-  ScrollPosition: {x: 0, y: 0}
 --- !u!114 &114272549498915370
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1328,10 +1279,9 @@ MonoBehaviour:
   MixerGroup: {fileID: 0}
   _children:
   - {fileID: 114813855833361822}
-  - {fileID: 114251341011481240}
   - {fileID: 114834863394525056}
   Filtered: 0
-  FoldedOut: 0
+  FoldedOut: 1
   ScrollPosition: {x: 0, y: 0}
 --- !u!114 &114455750600517056
 MonoBehaviour:
@@ -1421,7 +1371,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _clip: {fileID: 0}
+  _clip: {fileID: 8300000, guid: bacac8df731025645bf5312841ce31ba, type: 3}
   LoadedFromAssetBundle: 0
 --- !u!114 &114513978887668704
 MonoBehaviour:
@@ -1487,7 +1437,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  weights: 320000003200000032000000
+  weights: 3200000032000000
   doNotRepeat: 1
 --- !u!114 &114551254396451528
 MonoBehaviour:
@@ -1990,72 +1940,6 @@ MonoBehaviour:
   Filtered: 0
   FoldedOut: 0
   ScrollPosition: {x: 0, y: 0}
---- !u!114 &114754682306946192
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1157775257787552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fc14a519ae4a03499b0c9ddb2abae5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RandomVolume: 0
-  MinVolume: 1
-  MaxVolume: 1
-  RandomizeDelay: 0
-  InitialDelayMin: 0
-  InitialDelayMax: 0
-  RandomPitch: 0
-  MinPitch: 1
-  MaxPitch: 1
-  RandomBlend: 0
-  MinBlend: 0
-  MaxBlend: 1
-  Loop: 0
-  LoopInfinite: 0
-  RandomizeLoops: 0
-  MinIterations: 1
-  MaxIterations: 1
-  OverrideAttenuation: 0
-  MinDistance: 1
-  MaxDistance: 500
-  RolloffMode: 0
-  LimitInstances: 0
-  MaxInstances: 1
-  InstanceStealingTypes: 0
-  Priority: 128
-  RandomSecondsOffset: 0
-  MinSecondsOffset: 0
-  MaxSecondsOffset: 0
-  SelectedArea: 0
-  FalloffCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 0.1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  _clip: {fileID: 0}
-  LoadedFromAssetBundle: 0
 --- !u!114 &114774274417162198
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2094,72 +1978,6 @@ MonoBehaviour:
   Filtered: 0
   FoldedOut: 1
   ScrollPosition: {x: 0, y: 0}
---- !u!114 &114785316302539504
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1157775257787552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fc14a519ae4a03499b0c9ddb2abae5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RandomVolume: 0
-  MinVolume: 1
-  MaxVolume: 1
-  RandomizeDelay: 0
-  InitialDelayMin: 0
-  InitialDelayMax: 0
-  RandomPitch: 0
-  MinPitch: 1
-  MaxPitch: 1
-  RandomBlend: 0
-  MinBlend: 0
-  MaxBlend: 1
-  Loop: 0
-  LoopInfinite: 0
-  RandomizeLoops: 0
-  MinIterations: 1
-  MaxIterations: 1
-  OverrideAttenuation: 0
-  MinDistance: 1
-  MaxDistance: 500
-  RolloffMode: 0
-  LimitInstances: 0
-  MaxInstances: 1
-  InstanceStealingTypes: 0
-  Priority: 128
-  RandomSecondsOffset: 0
-  MinSecondsOffset: 0
-  MaxSecondsOffset: 0
-  SelectedArea: 0
-  FalloffCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 0.1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  _clip: {fileID: 0}
-  LoadedFromAssetBundle: 0
 --- !u!114 &114813855833361822
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2486,7 +2304,7 @@ MonoBehaviour:
   - {fileID: 114444516199458478}
   - {fileID: 114191343399808360}
   Filtered: 0
-  FoldedOut: 0
+  FoldedOut: 1
   ScrollPosition: {x: 0, y: 0}
 --- !u!114 &114916730639759130
 MonoBehaviour:
@@ -2728,7 +2546,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  weights: 320000003200000032000000
+  weights: 3200000032000000
   doNotRepeat: 1
 --- !u!114 &114958359374687088
 MonoBehaviour:
