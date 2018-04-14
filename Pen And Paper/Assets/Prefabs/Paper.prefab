@@ -1018,11 +1018,13 @@ MonoBehaviour:
     Hand: {fileID: 4844077743369430}
     UserInputVerticalSpeed: 2
     BaseVerticalSpeed: -0.5
-    VerticalShakiness: 1
+    VerticalShakiness: 2
   RightHand:
     Hand: {fileID: 4842910742647068}
     UserInputVerticalSpeed: 2
     BaseVerticalSpeed: 0.2
-    VerticalShakiness: 1
+    VerticalShakiness: 2
   Paper: {fileID: 4090568375307952}
   PaperRipDistance: 3
+  PenBreakingLimit: 11
+  PenBreakingMultiplier: 25

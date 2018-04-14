@@ -34,20 +34,11 @@ public class PencilBrokeScript : Singleton<PencilBrokeScript>
         foreach (var penPart in PenParts)
         {
             penPart.DOMove(penPart.position +
-                penPart.up * UnityEngine.Random.Range(-0.2f, 0.2f) +
-                penPart.forward * UnityEngine.Random.Range(-0.2f, 0.2f) +
-                penPart.right * UnityEngine.Random.Range(-0.2f, 0.2f), 0.2f);
+                penPart.up * UnityEngine.Random.Range(-0.3f, 0.3f) +
+                penPart.forward * UnityEngine.Random.Range(-0.3f, 0.3f) +
+                penPart.right * UnityEngine.Random.Range(-0.3f, 0.3f), 0.1f);
         }
-        //yield return new WaitForSeconds(1);
 
-        //foreach (var penPart in PenParts)
-        //{
-        //    penPart.DOMove(penPart.position +
-        //        penPart.up * UnityEngine.Random.Range(-5, 5) +
-        //        penPart.forward * UnityEngine.Random.Range(-5, 5) +
-        //        penPart.right * UnityEngine.Random.Range(-5, 5), 4.5f)
-        //        .SetEase(PartsFlyCurve);
-        //}
         yield return new WaitForSeconds(4);
         onDone();
     }
