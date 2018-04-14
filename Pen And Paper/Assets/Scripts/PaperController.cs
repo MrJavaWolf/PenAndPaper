@@ -19,7 +19,7 @@ public class PaperController : Singleton<PaperController>
     // Update is called once per frame
     void Update()
     {
-        var input = InputController.Instance.GetXBoxInput();
+        var input = InputController.Instance.GetPs4Input();
         UpdateHand(LeftHand, input.LeftStick);
         UpdateHand(RightHand, input.RightStick);
         if (WillPaperRip())
