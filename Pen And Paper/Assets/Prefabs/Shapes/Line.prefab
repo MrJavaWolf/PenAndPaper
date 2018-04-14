@@ -127,7 +127,7 @@ Transform:
   m_GameObject: {fileID: 1696106334366862}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4659106097923454}
   - {fileID: 4629736164038952}
@@ -158,7 +158,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1565481472495374}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.25, z: 0}
+  m_LocalPosition: {x: 0, y: 1.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4025459179452548}
@@ -172,7 +172,7 @@ Transform:
   m_GameObject: {fileID: 1012433642104516}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.01}
-  m_LocalScale: {x: 2, y: 0.4, z: 2}
+  m_LocalScale: {x: 2, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 4025459179452548}
   m_RootOrder: 5
@@ -184,7 +184,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1886829196991990}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4025459179452548}
@@ -197,7 +197,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1809067971791908}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.25, z: 0}
+  m_LocalPosition: {x: 0, y: -1.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4025459179452548}
@@ -210,7 +210,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1388227486778040}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0, y: -2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4025459179452548}
@@ -243,7 +243,9 @@ MonoBehaviour:
   BreakDistance: 0
   Line: {fileID: 1661192554419468, guid: fb4707911ce496448a519e116fc4b24a, type: 2}
   DistanceBetweenLinePoints: 0
-  LineThickness: 0.3
+  LineThickness: 0.2
+  MinLineThickness: 0.05
+  LineColor: {r: 0.64705884, g: 0.64705884, b: 0.64705884, a: 1}
   positions:
   - {fileID: 4659106097923454}
   - {fileID: 4629736164038952}

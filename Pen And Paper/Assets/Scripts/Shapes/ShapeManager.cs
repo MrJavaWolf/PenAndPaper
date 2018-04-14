@@ -30,7 +30,7 @@ public class ShapeManager : Singleton<ShapeManager>
         }
         else
         {
-            GameEnded.Invoke();
+            //GameEnded.Invoke();
         }
     }
 

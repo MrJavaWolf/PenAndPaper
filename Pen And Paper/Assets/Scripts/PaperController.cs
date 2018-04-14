@@ -10,7 +10,7 @@ public class PaperController : MonoBehaviour
     public Transform Paper;
 
     /// <summary>
-    /// How far the hands are allowed to be vertially compared to eachother, before the paper rips. 
+    /// How far the hands are allowed to be vertially compared to eachother, before the paper rips.
     /// </summary>
     public float PaperRipDistance = 3;
 
@@ -25,7 +25,6 @@ public class PaperController : MonoBehaviour
         if (WillPaperRip())
         {
             if (OnPaperRip != null) OnPaperRip(this, EventArgs.Empty);
-            Debug.Log("Paper RIP");
         }
         else
         {
