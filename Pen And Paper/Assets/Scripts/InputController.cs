@@ -28,7 +28,7 @@ public class InputController : Singleton<InputController>
     private const string Ps4_Start = "Ps4_Start";
 
     /// <summary>
-    /// If enabled it will not read the actual controller input, this allowes you to change the values of 'XBox Input' and 'Ps4 Input' in the Unity editor. 
+    /// If enabled it will not read the actual controller input, this allowes you to change the values of 'XBox Input' and 'Ps4 Input' in the Unity editor.
     /// </summary>
     [Tooltip("If enabled it will not read the actual controller input, this allowes you to change the values of 'XBox Input' and 'Ps4 Input' in the Unity editor.")]
     public bool DebugInput = false;
