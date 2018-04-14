@@ -185,6 +185,9 @@ MonoBehaviour:
   DontDestroyOnLoadConfig: 0
   Tip: {fileID: 1960447137425054}
   MovementSpeed: 2
+  BaseSpeed: 0.3
+  HorizontalShakiness: 3
+  VerticalShakiness: 3
 --- !u!136 &136213871399112640
 CapsuleCollider:
   m_ObjectHideFlags: 1
