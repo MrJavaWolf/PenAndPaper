@@ -245,7 +245,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 299453138
+  randomSeed: -1202913906
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3666,6 +3666,26 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 23583125017742230, guid: aa99329b19fd72843b60732ce4fd1dc5,
     type: 2}
   m_PrefabInternal: {fileID: 184360705}
+--- !u!4 &184360708 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4842910742647068, guid: aa99329b19fd72843b60732ce4fd1dc5,
+    type: 2}
+  m_PrefabInternal: {fileID: 184360705}
+--- !u!4 &184360709 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4127043564503524, guid: aa99329b19fd72843b60732ce4fd1dc5,
+    type: 2}
+  m_PrefabInternal: {fileID: 184360705}
+--- !u!4 &184360710 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4368501156452436, guid: aa99329b19fd72843b60732ce4fd1dc5,
+    type: 2}
+  m_PrefabInternal: {fileID: 184360705}
+--- !u!4 &184360711 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4844077743369430, guid: aa99329b19fd72843b60732ce4fd1dc5,
+    type: 2}
+  m_PrefabInternal: {fileID: 184360705}
 --- !u!1001 &485872895
 Prefab:
   m_ObjectHideFlags: 0
@@ -3962,10 +3982,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DontDestroyOnLoadConfig: 0
-  RightHand: {fileID: 0}
-  RightPaper: {fileID: 0}
-  LeftHand: {fileID: 0}
-  LeftPaper: {fileID: 0}
+  RightHand: {fileID: 184360708}
+  RightPaper: {fileID: 184360709}
+  LeftHand: {fileID: 184360711}
+  LeftPaper: {fileID: 184360710}
   CameraOffset: {x: 0, y: 5, z: 8}
   PaperMovement:
     serializedVersion: 2
