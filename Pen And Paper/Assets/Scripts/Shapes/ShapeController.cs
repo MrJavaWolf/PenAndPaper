@@ -34,9 +34,9 @@ public class ShapeController : MonoBehaviour
             //if its not too close
             //if (Vector2.Distance(PenController.Instance.GetTipPosition(),
             //    recordedPositions.LastOrDefault().Pos) > DistanceBetweenLinePoints)
-            var tippos = new Vector2(PenController.Instance.GetTipPosition().x, PenController.Instance.GetTipPosition().y);
+            var tipPos = new Vector2(PenController.Instance.GetTipPosition().x, PenController.Instance.GetTipPosition().y);
 
-            if (tippos != recordedPositions.LastOrDefault().Pos)
+            if (tipPos != recordedPositions.LastOrDefault().Pos)
             {
                 recordedPositions.Add(new DrawData(
                    PenController.Instance.transform.position,
