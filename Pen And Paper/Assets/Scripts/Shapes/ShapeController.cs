@@ -83,7 +83,7 @@ public class ShapeController : MonoBehaviour
             ShapeManager.Instance.GetNextShape();
         }
 
-        if (PenController.Instance.GetTipPosition().z > 0)
+        if (PenController.Instance.GetTipPosition().z > 0.4)
         {
             ShapeManager.Instance.PuncturePaper();
         }

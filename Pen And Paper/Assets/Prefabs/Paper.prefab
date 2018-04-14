@@ -935,4 +935,4 @@ MonoBehaviour:
     BaseVerticalSpeed: 0.2
     VerticalShakiness: 0.5
   Paper: {fileID: 4090568375307952}
-  PaperRipDistance: 2
+  PaperRipDistance: 5
