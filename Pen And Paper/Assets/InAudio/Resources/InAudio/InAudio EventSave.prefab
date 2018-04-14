@@ -20,10 +20,34 @@ GameObject:
   m_Component:
   - component: {fileID: 4265393279420198}
   - component: {fileID: 114923389706110574}
-  - component: {fileID: 114463207886643056}
-  - component: {fileID: 114104587862881846}
   - component: {fileID: 114888949125452662}
   - component: {fileID: 114835302746570200}
+  - component: {fileID: 114957977416860028}
+  - component: {fileID: 114249328249260120}
+  - component: {fileID: 114008434052682130}
+  - component: {fileID: 114495792448023958}
+  - component: {fileID: 114288588772476422}
+  - component: {fileID: 114427347028607724}
+  - component: {fileID: 114529250146026622}
+  - component: {fileID: 114803483050309658}
+  - component: {fileID: 114982522739586392}
+  - component: {fileID: 114721141348400906}
+  - component: {fileID: 114165092095591438}
+  - component: {fileID: 114163699265079986}
+  - component: {fileID: 114984439324203982}
+  - component: {fileID: 114425944929409628}
+  - component: {fileID: 114709537925116336}
+  - component: {fileID: 114677850288462338}
+  - component: {fileID: 114588364871496840}
+  - component: {fileID: 114168993661204652}
+  - component: {fileID: 114535166629555872}
+  - component: {fileID: 114337022471268476}
+  - component: {fileID: 114038772431470028}
+  - component: {fileID: 114766181213943424}
+  - component: {fileID: 114501666218290032}
+  - component: {fileID: 114069149562385058}
+  - component: {fileID: 114740422314888604}
+  - component: {fileID: 114052292028101100}
   m_Layer: 0
   m_Name: InAudio EventSave
   m_TagString: Untagged
@@ -44,7 +68,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114104587862881846
+--- !u!114 &114008434052682130
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781774024281992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a512d6d4125cef14881f432b3a65959c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 1666615915
+  _type: 1
+  Name: Man
+  _parent: {fileID: 114923389706110574}
+  Delay: 0
+  _children:
+  - {fileID: 114529250146026622}
+  - {fileID: 114535166629555872}
+  _actionList: []
+  FoldedOut: 1
+  Filtered: 0
+  PlacedExternaly: 0
+--- !u!114 &114038772431470028
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781774024281992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a512d6d4125cef14881f432b3a65959c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 71548561
+  _type: 3
+  Name: Woman Ingame Paper
+  _parent: {fileID: 114495792448023958}
+  Delay: 0
+  _children: []
+  _actionList:
+  - {fileID: 114766181213943424}
+  FoldedOut: 1
+  Filtered: 0
+  PlacedExternaly: 0
+--- !u!114 &114052292028101100
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -57,10 +126,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Delay: 0
   _eventActionType: 1
-  Node: {fileID: 114324287510408768, guid: 5b76fb594578fca47b05b02ed7cdb505, type: 2}
+  Node: {fileID: 114861123268477538, guid: 5b76fb594578fca47b05b02ed7cdb505, type: 2}
   Fadetime: 0
   TweenType: 1
---- !u!114 &114463207886643056
+--- !u!114 &114069149562385058
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -71,14 +140,373 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a512d6d4125cef14881f432b3a65959c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _guid: 1129936187
+  _guid: 1664067725
   _type: 3
-  Name: PlayManSounds
+  Name: lose
   _parent: {fileID: 114923389706110574}
   Delay: 0
   _children: []
   _actionList:
-  - {fileID: 114104587862881846}
+  - {fileID: 114052292028101100}
+  FoldedOut: 1
+  Filtered: 0
+  PlacedExternaly: 0
+--- !u!114 &114163699265079986
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781774024281992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6887394428e7c84195fcfc84974e9b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 0
+  _eventActionType: 2
+  Node: {fileID: 114122392941087282, guid: 5b76fb594578fca47b05b02ed7cdb505, type: 2}
+  Fadetime: 0
+  TweenType: 1
+--- !u!114 &114165092095591438
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781774024281992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a512d6d4125cef14881f432b3a65959c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 894865340
+  _type: 3
+  Name: Stop Ambient
+  _parent: {fileID: 114923389706110574}
+  Delay: 0
+  _children: []
+  _actionList:
+  - {fileID: 114163699265079986}
+  FoldedOut: 1
+  Filtered: 0
+  PlacedExternaly: 0
+--- !u!114 &114168993661204652
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781774024281992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6887394428e7c84195fcfc84974e9b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 0
+  _eventActionType: 1
+  Node: {fileID: 114444516199458478, guid: 5b76fb594578fca47b05b02ed7cdb505, type: 2}
+  Fadetime: 0
+  TweenType: 1
+--- !u!114 &114249328249260120
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781774024281992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6887394428e7c84195fcfc84974e9b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 0
+  _eventActionType: 1
+  Node: {fileID: 114134122328199784, guid: 5b76fb594578fca47b05b02ed7cdb505, type: 2}
+  Fadetime: 0
+  TweenType: 1
+--- !u!114 &114288588772476422
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781774024281992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a512d6d4125cef14881f432b3a65959c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 1653418838
+  _type: 3
+  Name: Play Ambient
+  _parent: {fileID: 114923389706110574}
+  Delay: 0
+  _children: []
+  _actionList:
+  - {fileID: 114982522739586392}
+  FoldedOut: 1
+  Filtered: 0
+  PlacedExternaly: 0
+--- !u!114 &114337022471268476
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781774024281992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6887394428e7c84195fcfc84974e9b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 0
+  _eventActionType: 1
+  Node: {fileID: 114632280857665602, guid: 5b76fb594578fca47b05b02ed7cdb505, type: 2}
+  Fadetime: 0
+  TweenType: 1
+--- !u!114 &114425944929409628
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781774024281992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6887394428e7c84195fcfc84974e9b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 0
+  _eventActionType: 2
+  Node: {fileID: 114782557437426744, guid: 5b76fb594578fca47b05b02ed7cdb505, type: 2}
+  Fadetime: 0
+  TweenType: 1
+--- !u!114 &114427347028607724
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781774024281992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a512d6d4125cef14881f432b3a65959c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 1026239990
+  _type: 3
+  Name: Play Menu Music
+  _parent: {fileID: 114923389706110574}
+  Delay: 0
+  _children: []
+  _actionList:
+  - {fileID: 114721141348400906}
+  FoldedOut: 1
+  Filtered: 0
+  PlacedExternaly: 0
+--- !u!114 &114495792448023958
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781774024281992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a512d6d4125cef14881f432b3a65959c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 657216081
+  _type: 1
+  Name: Woman
+  _parent: {fileID: 114923389706110574}
+  Delay: 0
+  _children:
+  - {fileID: 114803483050309658}
+  - {fileID: 114038772431470028}
+  _actionList: []
+  FoldedOut: 1
+  Filtered: 0
+  PlacedExternaly: 0
+--- !u!114 &114501666218290032
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781774024281992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a512d6d4125cef14881f432b3a65959c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 659896298
+  _type: 3
+  Name: Win
+  _parent: {fileID: 114923389706110574}
+  Delay: 0
+  _children: []
+  _actionList:
+  - {fileID: 114740422314888604}
+  FoldedOut: 1
+  Filtered: 0
+  PlacedExternaly: 0
+--- !u!114 &114529250146026622
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781774024281992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a512d6d4125cef14881f432b3a65959c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 1078279718
+  _type: 3
+  Name: Man Ingame Pen
+  _parent: {fileID: 114008434052682130}
+  Delay: 0
+  _children: []
+  _actionList:
+  - {fileID: 114588364871496840}
+  FoldedOut: 1
+  Filtered: 0
+  PlacedExternaly: 0
+--- !u!114 &114535166629555872
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781774024281992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a512d6d4125cef14881f432b3a65959c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 242383581
+  _type: 3
+  Name: Man Ingame Paper
+  _parent: {fileID: 114008434052682130}
+  Delay: 0
+  _children: []
+  _actionList:
+  - {fileID: 114337022471268476}
+  FoldedOut: 1
+  Filtered: 0
+  PlacedExternaly: 0
+--- !u!114 &114588364871496840
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781774024281992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6887394428e7c84195fcfc84974e9b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 0
+  _eventActionType: 1
+  Node: {fileID: 114135400386144520, guid: 5b76fb594578fca47b05b02ed7cdb505, type: 2}
+  Fadetime: 0
+  TweenType: 1
+--- !u!114 &114677850288462338
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781774024281992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6887394428e7c84195fcfc84974e9b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 0
+  _eventActionType: 5
+  Node: {fileID: 0}
+  Fadetime: 0
+  TweenType: 1
+--- !u!114 &114709537925116336
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781774024281992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a512d6d4125cef14881f432b3a65959c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 413684948
+  _type: 3
+  Name: Stop All Audio
+  _parent: {fileID: 114923389706110574}
+  Delay: 0
+  _children: []
+  _actionList:
+  - {fileID: 114677850288462338}
+  FoldedOut: 1
+  Filtered: 0
+  PlacedExternaly: 0
+--- !u!114 &114721141348400906
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781774024281992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6887394428e7c84195fcfc84974e9b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 0
+  _eventActionType: 1
+  Node: {fileID: 114782557437426744, guid: 5b76fb594578fca47b05b02ed7cdb505, type: 2}
+  Fadetime: 0
+  TweenType: 1
+--- !u!114 &114740422314888604
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781774024281992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6887394428e7c84195fcfc84974e9b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 0
+  _eventActionType: 1
+  Node: {fileID: 114455750600517056, guid: 5b76fb594578fca47b05b02ed7cdb505, type: 2}
+  Fadetime: 0
+  TweenType: 1
+--- !u!114 &114766181213943424
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781774024281992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6887394428e7c84195fcfc84974e9b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 0
+  _eventActionType: 1
+  Node: {fileID: 114191343399808360, guid: 5b76fb594578fca47b05b02ed7cdb505, type: 2}
+  Fadetime: 0
+  TweenType: 1
+--- !u!114 &114803483050309658
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781774024281992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a512d6d4125cef14881f432b3a65959c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 1039607596
+  _type: 3
+  Name: Woman Ingame Pen
+  _parent: {fileID: 114495792448023958}
+  Delay: 0
+  _children: []
+  _actionList:
+  - {fileID: 114168993661204652}
   FoldedOut: 1
   Filtered: 0
   PlacedExternaly: 0
@@ -137,9 +565,78 @@ MonoBehaviour:
   _parent: {fileID: 0}
   Delay: 0
   _children:
-  - {fileID: 114463207886643056}
   - {fileID: 114888949125452662}
+  - {fileID: 114957977416860028}
+  - {fileID: 114288588772476422}
+  - {fileID: 114165092095591438}
+  - {fileID: 114427347028607724}
+  - {fileID: 114984439324203982}
+  - {fileID: 114709537925116336}
+  - {fileID: 114008434052682130}
+  - {fileID: 114495792448023958}
+  - {fileID: 114501666218290032}
+  - {fileID: 114069149562385058}
   _actionList: []
+  FoldedOut: 1
+  Filtered: 0
+  PlacedExternaly: 0
+--- !u!114 &114957977416860028
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781774024281992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a512d6d4125cef14881f432b3a65959c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 536137218
+  _type: 3
+  Name: Explosion
+  _parent: {fileID: 114923389706110574}
+  Delay: 0
+  _children: []
+  _actionList:
+  - {fileID: 114249328249260120}
+  FoldedOut: 1
+  Filtered: 0
+  PlacedExternaly: 0
+--- !u!114 &114982522739586392
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781774024281992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6887394428e7c84195fcfc84974e9b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 0
+  _eventActionType: 1
+  Node: {fileID: 114122392941087282, guid: 5b76fb594578fca47b05b02ed7cdb505, type: 2}
+  Fadetime: 0
+  TweenType: 1
+--- !u!114 &114984439324203982
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781774024281992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a512d6d4125cef14881f432b3a65959c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 1458460049
+  _type: 3
+  Name: Stop Menu Music
+  _parent: {fileID: 114923389706110574}
+  Delay: 0
+  _children: []
+  _actionList:
+  - {fileID: 114425944929409628}
   FoldedOut: 1
   Filtered: 0
   PlacedExternaly: 0

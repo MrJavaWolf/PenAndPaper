@@ -668,10 +668,7 @@ MonoBehaviour:
   onEnable:
     Events: []
   onStart:
-    Events:
-    - Event: {fileID: 114463207886643056, guid: ded889cc89bc7d142bdbf65ee27ae33f,
-        type: 2}
-      PostAt: 0
+    Events: []
   onDisable:
     Events: []
   onDestroy:
