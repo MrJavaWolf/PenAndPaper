@@ -8,6 +8,15 @@ public class LineController : ShapeController
     public List<Transform> positions = new List<Transform>();
     public float Closeness = .2f;
 
+    private void Start()
+    {
+        foreach (Transform t in transform)
+        {
+            if (t.name.Contains("Point"))
+                positions.Add(t);
+        }
+    }
+
     protected override bool IsShapeFilled()
     {
         List<float> distances = new List<float>();

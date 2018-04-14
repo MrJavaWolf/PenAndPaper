@@ -861,8 +861,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.37, y: 0.27, z: 0.1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.37, y: 0.27, z: 0.5}
+  m_Center: {x: 0, y: 0, z: -0.25}
 --- !u!95 &95358901697060448
 Animator:
   serializedVersion: 3
@@ -911,6 +911,7 @@ MonoBehaviour:
   DontDestroyOnLoadConfig: 0
   Shapes:
   - {fileID: 1696106334366862, guid: aa18919402c261741879d8b69ec0c8fd, type: 2}
+  - {fileID: 1696106334366862, guid: a6f61577dd3896145aec37d6d20a1d23, type: 2}
 --- !u!114 &114476198282876462
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -922,7 +923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c79a19352a354746928eb8830ad6cd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementSpeed: 2
+  DontDestroyOnLoadConfig: 0
   LeftHand:
     Hand: {fileID: 4844077743369430}
     UserInputVerticalSpeed: 2
@@ -934,4 +935,4 @@ MonoBehaviour:
     BaseVerticalSpeed: 0.2
     VerticalShakiness: 0.5
   Paper: {fileID: 4090568375307952}
-  PaperRipDistance: 2
+  PaperRipDistance: 5
