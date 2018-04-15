@@ -37,7 +37,6 @@ GameObject:
   - component: {fileID: 114984439324203982}
   - component: {fileID: 114425944929409628}
   - component: {fileID: 114709537925116336}
-  - component: {fileID: 114677850288462338}
   - component: {fileID: 114588364871496840}
   - component: {fileID: 114168993661204652}
   - component: {fileID: 114535166629555872}
@@ -52,6 +51,7 @@ GameObject:
   - component: {fileID: 114237563585126530}
   - component: {fileID: 114998903753470320}
   - component: {fileID: 114046336921121816}
+  - component: {fileID: 114123244906974778}
   m_Layer: 0
   m_Name: InAudio EventSave
   m_TagString: Untagged
@@ -170,6 +170,21 @@ MonoBehaviour:
   FoldedOut: 1
   Filtered: 0
   PlacedExternaly: 0
+--- !u!114 &114123244906974778
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781774024281992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f96d1cbc1099f3b4391f335ed30815ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 0
+  _eventActionType: 12
+  Snapshot: {fileID: 245050066465443898, guid: f6f35721edf3fc84a88d188753f59889, type: 2}
+  TransitionTime: 0.2
 --- !u!114 &114154161870915350
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -458,22 +473,6 @@ MonoBehaviour:
   Node: {fileID: 114135400386144520, guid: 5b76fb594578fca47b05b02ed7cdb505, type: 2}
   Fadetime: 0
   TweenType: 1
---- !u!114 &114677850288462338
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1781774024281992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6887394428e7c84195fcfc84974e9b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Delay: 0
-  _eventActionType: 5
-  Node: {fileID: 0}
-  Fadetime: 0
-  TweenType: 1
 --- !u!114 &114709537925116336
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -487,12 +486,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _guid: 413684948
   _type: 3
-  Name: Stop All Audio
+  Name: Mute all audio
   _parent: {fileID: 114923389706110574}
   Delay: 0
   _children: []
   _actionList:
-  - {fileID: 114677850288462338}
+  - {fileID: 114123244906974778}
   FoldedOut: 1
   Filtered: 0
   PlacedExternaly: 0

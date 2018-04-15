@@ -3961,6 +3961,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e577cd468f0090c42adc67ca1c139e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StopAudio:
+    Events:
+    - Event: {fileID: 114709537925116336, guid: ded889cc89bc7d142bdbf65ee27ae33f,
+        type: 2}
+      PostAt: 0
 --- !u!4 &1349584293
 Transform:
   m_ObjectHideFlags: 0
@@ -4207,7 +4212,6 @@ GameObject:
   - component: {fileID: 1521013055}
   - component: {fileID: 1521013054}
   - component: {fileID: 1521013053}
-  - component: {fileID: 1521013057}
   - component: {fileID: 1521013058}
   m_Layer: 0
   m_Name: Main Camera
@@ -4279,41 +4283,6 @@ Transform:
   m_Father: {fileID: 936013345}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1521013057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1521013052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a50db370d7ae817469196a05b0309631, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onEnable:
-    Events: []
-  onStart:
-    Events: []
-  onDisable:
-    Events: []
-  onDestroy:
-    Events: []
-  onEnableMusic:
-    MusicControls: []
-  onStartMusic:
-    MusicControls: []
-  onDisableMusic:
-    MusicControls: []
-  onDestroyMusic:
-    MusicControls: []
-  CollisionList:
-    CollisionReaction: 1
-    TriggerReaction: 1
-    Layers: -1
-    EventsEnter:
-      Events: []
-    EventsExit:
-      Events: []
 --- !u!114 &1521013058
 MonoBehaviour:
   m_ObjectHideFlags: 0
