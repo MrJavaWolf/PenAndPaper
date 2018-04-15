@@ -447,8 +447,9 @@ MonoBehaviour:
   _nodeData: {fileID: 114090952816501734}
   Name: Ambient
   _parent: {fileID: 114143607717903476}
-  OverrideParentMixerGroup: 0
-  MixerGroup: {fileID: 0}
+  OverrideParentMixerGroup: 1
+  MixerGroup: {fileID: 243063538680173112, guid: f6f35721edf3fc84a88d188753f59889,
+    type: 2}
   _children: []
   Filtered: 0
   FoldedOut: 0
@@ -517,7 +518,7 @@ MonoBehaviour:
   Name: Audio Root
   _parent: {fileID: 0}
   OverrideParentMixerGroup: 0
-  MixerGroup: {fileID: 0}
+  MixerGroup: {fileID: 24300002, guid: f6f35721edf3fc84a88d188753f59889, type: 2}
   _children:
   - {fileID: 114364578817318528}
   - {fileID: 114134122328199784}
@@ -1305,7 +1306,7 @@ MonoBehaviour:
   - {fileID: 114318922068694534}
   - {fileID: 114043766387040696}
   Filtered: 0
-  FoldedOut: 1
+  FoldedOut: 0
   ScrollPosition: {x: 0, y: 0}
 --- !u!114 &114470098562324390
 MonoBehaviour:
@@ -1972,8 +1973,9 @@ MonoBehaviour:
   _nodeData: {fileID: 114551254396451528}
   Name: Menu Music
   _parent: {fileID: 114143607717903476}
-  OverrideParentMixerGroup: 0
-  MixerGroup: {fileID: 0}
+  OverrideParentMixerGroup: 1
+  MixerGroup: {fileID: 243657160091048738, guid: f6f35721edf3fc84a88d188753f59889,
+    type: 2}
   _children: []
   Filtered: 0
   FoldedOut: 1
@@ -2258,7 +2260,7 @@ MonoBehaviour:
   - {fileID: 114919110822133902}
   - {fileID: 114032247680874870}
   Filtered: 0
-  FoldedOut: 1
+  FoldedOut: 0
   ScrollPosition: {x: 0, y: 0}
 --- !u!114 &114897809312495402
 MonoBehaviour:
@@ -2304,7 +2306,7 @@ MonoBehaviour:
   - {fileID: 114444516199458478}
   - {fileID: 114191343399808360}
   Filtered: 0
-  FoldedOut: 1
+  FoldedOut: 0
   ScrollPosition: {x: 0, y: 0}
 --- !u!114 &114916730639759130
 MonoBehaviour:

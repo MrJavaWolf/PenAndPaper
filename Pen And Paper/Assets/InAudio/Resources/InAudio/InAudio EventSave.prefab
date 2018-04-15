@@ -48,6 +48,10 @@ GameObject:
   - component: {fileID: 114069149562385058}
   - component: {fileID: 114740422314888604}
   - component: {fileID: 114052292028101100}
+  - component: {fileID: 114154161870915350}
+  - component: {fileID: 114237563585126530}
+  - component: {fileID: 114998903753470320}
+  - component: {fileID: 114046336921121816}
   m_Layer: 0
   m_Name: InAudio EventSave
   m_TagString: Untagged
@@ -113,6 +117,21 @@ MonoBehaviour:
   FoldedOut: 1
   Filtered: 0
   PlacedExternaly: 0
+--- !u!114 &114046336921121816
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781774024281992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f96d1cbc1099f3b4391f335ed30815ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 0
+  _eventActionType: 12
+  Snapshot: {fileID: 24500006, guid: f6f35721edf3fc84a88d188753f59889, type: 2}
+  TransitionTime: 1
 --- !u!114 &114052292028101100
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -148,6 +167,28 @@ MonoBehaviour:
   _children: []
   _actionList:
   - {fileID: 114052292028101100}
+  FoldedOut: 1
+  Filtered: 0
+  PlacedExternaly: 0
+--- !u!114 &114154161870915350
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781774024281992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a512d6d4125cef14881f432b3a65959c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 127766442
+  _type: 3
+  Name: Lower Music Volume
+  _parent: {fileID: 114923389706110574}
+  Delay: 0
+  _children: []
+  _actionList:
+  - {fileID: 114237563585126530}
   FoldedOut: 1
   Filtered: 0
   PlacedExternaly: 0
@@ -205,6 +246,21 @@ MonoBehaviour:
   Node: {fileID: 114444516199458478, guid: 5b76fb594578fca47b05b02ed7cdb505, type: 2}
   Fadetime: 0
   TweenType: 1
+--- !u!114 &114237563585126530
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781774024281992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f96d1cbc1099f3b4391f335ed30815ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 0
+  _eventActionType: 12
+  Snapshot: {fileID: 245132990219689194, guid: f6f35721edf3fc84a88d188753f59889, type: 2}
+  TransitionTime: 1
 --- !u!114 &114249328249260120
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -576,6 +632,8 @@ MonoBehaviour:
   - {fileID: 114495792448023958}
   - {fileID: 114501666218290032}
   - {fileID: 114069149562385058}
+  - {fileID: 114154161870915350}
+  - {fileID: 114998903753470320}
   _actionList: []
   FoldedOut: 1
   Filtered: 0
@@ -637,6 +695,28 @@ MonoBehaviour:
   _children: []
   _actionList:
   - {fileID: 114425944929409628}
+  FoldedOut: 1
+  Filtered: 0
+  PlacedExternaly: 0
+--- !u!114 &114998903753470320
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781774024281992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a512d6d4125cef14881f432b3a65959c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 356372519
+  _type: 3
+  Name: Reset Music Volume
+  _parent: {fileID: 114923389706110574}
+  Delay: 0
+  _children: []
+  _actionList:
+  - {fileID: 114046336921121816}
   FoldedOut: 1
   Filtered: 0
   PlacedExternaly: 0

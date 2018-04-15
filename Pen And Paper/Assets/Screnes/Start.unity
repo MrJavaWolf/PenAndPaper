@@ -532,8 +532,14 @@ MonoBehaviour:
     - Event: {fileID: 114427347028607724, guid: ded889cc89bc7d142bdbf65ee27ae33f,
         type: 2}
       PostAt: 0
+    - Event: {fileID: 114998903753470320, guid: ded889cc89bc7d142bdbf65ee27ae33f,
+        type: 2}
+      PostAt: 0
   EnterSelect:
-    Events: []
+    Events:
+    - Event: {fileID: 114154161870915350, guid: ded889cc89bc7d142bdbf65ee27ae33f,
+        type: 2}
+      PostAt: 0
   EnterGame:
     Events:
     - Event: {fileID: 114709537925116336, guid: ded889cc89bc7d142bdbf65ee27ae33f,
