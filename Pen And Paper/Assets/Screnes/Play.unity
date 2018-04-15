@@ -7197,7 +7197,7 @@ Prefab:
         type: 2}
       propertyPath: lookPoint
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1149047257}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eecca23daa1cc4644be9470f49d3261d, type: 2}
   m_IsPrefabParent: 0
@@ -7738,6 +7738,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DefaultPosInfluence: {x: 0.15, y: 0.15, z: 0.15}
   DefaultRotInfluence: {x: 1, y: 1, z: 1}
+--- !u!4 &1625758078 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4716341292770482, guid: eecca23daa1cc4644be9470f49d3261d,
+    type: 2}
+  m_PrefabInternal: {fileID: 816049098}
 --- !u!4 &1658415759 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4429903329919820, guid: c91cbc86138d5fb4d9e757ab9839e6ca,
@@ -7855,6 +7860,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1846927435
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1178393145105160, guid: eecca23daa1cc4644be9470f49d3261d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1846927436}
+  - component: {fileID: 1846927437}
+  m_Layer: 0
+  m_Name: CameraPoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1846927436
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4933585268356470, guid: eecca23daa1cc4644be9470f49d3261d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1846927435}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.02, y: 1.43, z: -7.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1625758078}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1846927437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114864478454507798, guid: eecca23daa1cc4644be9470f49d3261d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1846927435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e21642e4f36ad46944ae08f95158c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookPoint: {fileID: 1149047257}
+  Duration: 5
 --- !u!1 &1876609415
 GameObject:
   m_ObjectHideFlags: 0

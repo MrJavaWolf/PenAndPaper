@@ -573,7 +573,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DontDestroyOnLoadConfig: 0
-  DisableShakes: 1
+  DisableShakes: 0
   LeftHand:
     Hand: {fileID: 4844077743369430}
     UserInputVerticalSpeed: 2
