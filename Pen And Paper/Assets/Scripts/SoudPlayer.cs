@@ -12,6 +12,9 @@ public class SoudPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!PlaySceneController.SoundPlay)
+            return;
+
         if (CharacterManager.Instance.characterPlayerA == 0)
         {
             InAudio.PostEvent(gameObject, InGameManPen);
