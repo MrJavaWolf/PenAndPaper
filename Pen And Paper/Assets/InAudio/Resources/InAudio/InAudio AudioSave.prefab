@@ -79,6 +79,10 @@ GameObject:
   - component: {fileID: 114958359374687088}
   - component: {fileID: 114032247680874870}
   - component: {fileID: 114379098233311714}
+  - component: {fileID: 114532253575409244}
+  - component: {fileID: 114503094968274396}
+  - component: {fileID: 114895530706053388}
+  - component: {fileID: 114721060218940336}
   m_Layer: 0
   m_Name: InAudio AudioSave
   m_TagString: Untagged
@@ -525,7 +529,7 @@ MonoBehaviour:
   - {fileID: 114035270827490700}
   - {fileID: 114903609239290450}
   - {fileID: 114122392941087282}
-  - {fileID: 114782557437426744}
+  - {fileID: 114532253575409244}
   - {fileID: 114455750600517056}
   - {fileID: 114861123268477538}
   Filtered: 0
@@ -1374,6 +1378,70 @@ MonoBehaviour:
     m_RotationOrder: 4
   _clip: {fileID: 8300000, guid: bacac8df731025645bf5312841ce31ba, type: 3}
   LoadedFromAssetBundle: 0
+--- !u!114 &114503094968274396
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1157775257787552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 154ea6f38f3496047aa6154e30666f81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RandomVolume: 0
+  MinVolume: 1
+  MaxVolume: 1
+  RandomizeDelay: 0
+  InitialDelayMin: 0
+  InitialDelayMax: 0
+  RandomPitch: 0
+  MinPitch: 1
+  MaxPitch: 1
+  RandomBlend: 0
+  MinBlend: 0
+  MaxBlend: 1
+  Loop: 0
+  LoopInfinite: 0
+  RandomizeLoops: 0
+  MinIterations: 1
+  MaxIterations: 1
+  OverrideAttenuation: 0
+  MinDistance: 1
+  MaxDistance: 500
+  RolloffMode: 0
+  LimitInstances: 1
+  MaxInstances: 1
+  InstanceStealingTypes: 1
+  Priority: 128
+  RandomSecondsOffset: 0
+  MinSecondsOffset: 0
+  MaxSecondsOffset: 0
+  SelectedArea: 0
+  FalloffCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &114513978887668704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1440,6 +1508,31 @@ MonoBehaviour:
     m_RotationOrder: 4
   weights: 3200000032000000
   doNotRepeat: 1
+--- !u!114 &114532253575409244
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1157775257787552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19242b74995c0e44a8799397a6b0059a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 1948312175
+  _type: 4
+  _nodeData: {fileID: 114503094968274396}
+  Name: Audio Root Child
+  _parent: {fileID: 114143607717903476}
+  OverrideParentMixerGroup: 1
+  MixerGroup: {fileID: 243657160091048738, guid: f6f35721edf3fc84a88d188753f59889,
+    type: 2}
+  _children:
+  - {fileID: 114782557437426744}
+  - {fileID: 114895530706053388}
+  Filtered: 0
+  FoldedOut: 1
+  ScrollPosition: {x: 0, y: 0}
 --- !u!114 &114551254396451528
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1463,7 +1556,7 @@ MonoBehaviour:
   RandomBlend: 0
   MinBlend: 0
   MaxBlend: 1
-  Loop: 1
+  Loop: 0
   LoopInfinite: 1
   RandomizeLoops: 0
   MinIterations: 1
@@ -1919,6 +2012,72 @@ MonoBehaviour:
     m_RotationOrder: 4
   _clip: {fileID: 8300000, guid: b30e409060aa3ef40857e1e0901ff6b0, type: 3}
   LoadedFromAssetBundle: 0
+--- !u!114 &114721060218940336
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1157775257787552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc14a519ae4a03499b0c9ddb2abae5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RandomVolume: 0
+  MinVolume: 1
+  MaxVolume: 1
+  RandomizeDelay: 0
+  InitialDelayMin: 0
+  InitialDelayMax: 0
+  RandomPitch: 0
+  MinPitch: 1
+  MaxPitch: 1
+  RandomBlend: 0
+  MinBlend: 0
+  MaxBlend: 1
+  Loop: 1
+  LoopInfinite: 1
+  RandomizeLoops: 0
+  MinIterations: 1
+  MaxIterations: 1
+  OverrideAttenuation: 0
+  MinDistance: 1
+  MaxDistance: 500
+  RolloffMode: 0
+  LimitInstances: 0
+  MaxInstances: 1
+  InstanceStealingTypes: 0
+  Priority: 128
+  RandomSecondsOffset: 0
+  MinSecondsOffset: 0
+  MaxSecondsOffset: 0
+  SelectedArea: 0
+  FalloffCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _clip: {fileID: 8300000, guid: 13ee4b57fe136e24aa3190607e2ad1eb, type: 3}
+  LoadedFromAssetBundle: 0
 --- !u!114 &114748775511469914
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1972,13 +2131,13 @@ MonoBehaviour:
   _type: 2
   _nodeData: {fileID: 114551254396451528}
   Name: Menu Music
-  _parent: {fileID: 114143607717903476}
+  _parent: {fileID: 114532253575409244}
   OverrideParentMixerGroup: 1
   MixerGroup: {fileID: 243657160091048738, guid: f6f35721edf3fc84a88d188753f59889,
     type: 2}
   _children: []
   Filtered: 0
-  FoldedOut: 1
+  FoldedOut: 0
   ScrollPosition: {x: 0, y: 0}
 --- !u!114 &114813855833361822
 MonoBehaviour:
@@ -2259,6 +2418,29 @@ MonoBehaviour:
   _children:
   - {fileID: 114919110822133902}
   - {fileID: 114032247680874870}
+  Filtered: 0
+  FoldedOut: 0
+  ScrollPosition: {x: 0, y: 0}
+--- !u!114 &114895530706053388
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1157775257787552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19242b74995c0e44a8799397a6b0059a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 1811946033
+  _type: 2
+  _nodeData: {fileID: 114721060218940336}
+  Name: Audio Root Child Child
+  _parent: {fileID: 114532253575409244}
+  OverrideParentMixerGroup: 1
+  MixerGroup: {fileID: 243657160091048738, guid: f6f35721edf3fc84a88d188753f59889,
+    type: 2}
+  _children: []
   Filtered: 0
   FoldedOut: 0
   ScrollPosition: {x: 0, y: 0}

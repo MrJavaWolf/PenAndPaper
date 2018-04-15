@@ -541,10 +541,7 @@ MonoBehaviour:
         type: 2}
       PostAt: 0
   EnterGame:
-    Events:
-    - Event: {fileID: 114984439324203982, guid: ded889cc89bc7d142bdbf65ee27ae33f,
-        type: 2}
-      PostAt: 0
+    Events: []
   EnterLose:
     Events:
     - Event: {fileID: 114998903753470320, guid: ded889cc89bc7d142bdbf65ee27ae33f,
@@ -553,12 +550,18 @@ MonoBehaviour:
     - Event: {fileID: 114069149562385058, guid: ded889cc89bc7d142bdbf65ee27ae33f,
         type: 2}
       PostAt: 0
+    - Event: {fileID: 114984439324203982, guid: ded889cc89bc7d142bdbf65ee27ae33f,
+        type: 2}
+      PostAt: 0
   EnterWin:
     Events:
     - Event: {fileID: 114998903753470320, guid: ded889cc89bc7d142bdbf65ee27ae33f,
         type: 2}
       PostAt: 0
     - Event: {fileID: 114501666218290032, guid: ded889cc89bc7d142bdbf65ee27ae33f,
+        type: 2}
+      PostAt: 0
+    - Event: {fileID: 114984439324203982, guid: ded889cc89bc7d142bdbf65ee27ae33f,
         type: 2}
       PostAt: 0
 --- !u!1 &1190329649

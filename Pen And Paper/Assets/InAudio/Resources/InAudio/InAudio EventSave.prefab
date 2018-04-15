@@ -35,7 +35,6 @@ GameObject:
   - component: {fileID: 114165092095591438}
   - component: {fileID: 114163699265079986}
   - component: {fileID: 114984439324203982}
-  - component: {fileID: 114425944929409628}
   - component: {fileID: 114709537925116336}
   - component: {fileID: 114588364871496840}
   - component: {fileID: 114168993661204652}
@@ -52,6 +51,8 @@ GameObject:
   - component: {fileID: 114998903753470320}
   - component: {fileID: 114046336921121816}
   - component: {fileID: 114123244906974778}
+  - component: {fileID: 114375722064157956}
+  - component: {fileID: 114480034458633326}
   m_Layer: 0
   m_Name: InAudio EventSave
   m_TagString: Untagged
@@ -330,7 +331,7 @@ MonoBehaviour:
   Node: {fileID: 114632280857665602, guid: 5b76fb594578fca47b05b02ed7cdb505, type: 2}
   Fadetime: 0
   TweenType: 1
---- !u!114 &114425944929409628
+--- !u!114 &114375722064157956
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -338,14 +339,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1781774024281992}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6887394428e7c84195fcfc84974e9b6, type: 3}
+  m_Script: {fileID: 11500000, guid: f96d1cbc1099f3b4391f335ed30815ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Delay: 0
-  _eventActionType: 2
-  Node: {fileID: 114782557437426744, guid: 5b76fb594578fca47b05b02ed7cdb505, type: 2}
-  Fadetime: 0
-  TweenType: 1
+  _eventActionType: 12
+  Snapshot: {fileID: 245680636022075674, guid: f6f35721edf3fc84a88d188753f59889, type: 2}
+  TransitionTime: 0
 --- !u!114 &114427347028607724
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -368,6 +368,22 @@ MonoBehaviour:
   FoldedOut: 1
   Filtered: 0
   PlacedExternaly: 0
+--- !u!114 &114480034458633326
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781774024281992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6887394428e7c84195fcfc84974e9b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 0
+  _eventActionType: 2
+  Node: {fileID: 114532253575409244, guid: 5b76fb594578fca47b05b02ed7cdb505, type: 2}
+  Fadetime: 0
+  TweenType: 1
 --- !u!114 &114495792448023958
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -508,7 +524,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Delay: 0
   _eventActionType: 1
-  Node: {fileID: 114782557437426744, guid: 5b76fb594578fca47b05b02ed7cdb505, type: 2}
+  Node: {fileID: 114532253575409244, guid: 5b76fb594578fca47b05b02ed7cdb505, type: 2}
   Fadetime: 0
   TweenType: 1
 --- !u!114 &114740422314888604
@@ -693,7 +709,8 @@ MonoBehaviour:
   Delay: 0
   _children: []
   _actionList:
-  - {fileID: 114425944929409628}
+  - {fileID: 114375722064157956}
+  - {fileID: 114480034458633326}
   FoldedOut: 1
   Filtered: 0
   PlacedExternaly: 0

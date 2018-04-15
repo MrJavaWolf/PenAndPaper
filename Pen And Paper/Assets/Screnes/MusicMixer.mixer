@@ -12,6 +12,7 @@ AudioMixerController:
   - {fileID: 24500006}
   - {fileID: 245132990219689194}
   - {fileID: 245050066465443898}
+  - {fileID: 245680636022075674}
   m_StartSnapshot: {fileID: 24500006}
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
@@ -67,6 +68,7 @@ AudioMixerSnapshotController:
   m_SnapshotID: fbde77e134bf09e47b8ce5023678908a
   m_FloatValues:
     dda0a9a9019ffed4ca0203f22d4e241e: -0.02577689
+    a844b77c6ec37f445b171a4f4a41a4da: 9.925883
   m_TransitionOverrides: {}
 --- !u!243 &243063538680173112
 AudioMixerGroupController:
@@ -150,4 +152,16 @@ AudioMixerSnapshotController:
   m_SnapshotID: d351cdb266d85fe44a995bba4af24fa8
   m_FloatValues:
     dda0a9a9019ffed4ca0203f22d4e241e: -9.833291
+  m_TransitionOverrides: {}
+--- !u!245 &245680636022075674
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: MusicMuted
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: 85539fe97b7fecf48a92e25590d2ef67
+  m_FloatValues:
+    6a73efe3e9b266b44a6c49284dec660f: -0.037667945
+    dda0a9a9019ffed4ca0203f22d4e241e: -80
   m_TransitionOverrides: {}
