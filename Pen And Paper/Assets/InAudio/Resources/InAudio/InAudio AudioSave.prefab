@@ -2145,7 +2145,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _clip: {fileID: 8300000, guid: 727da0be5f87c1a45b8c82b6436d8b3c, type: 3}
+  _clip: {fileID: 8300000, guid: 8c59de44c186d9747ac23ca17eef6dad, type: 3}
   LoadedFromAssetBundle: 0
 --- !u!114 &114748775511469914
 MonoBehaviour:
@@ -2416,8 +2416,8 @@ MonoBehaviour:
   _nodeData: {fileID: 114748123594745400}
   Name: PaperRip
   _parent: {fileID: 114143607717903476}
-  OverrideParentMixerGroup: 0
-  MixerGroup: {fileID: 24300002, guid: f6f35721edf3fc84a88d188753f59889, type: 2}
+  OverrideParentMixerGroup: 1
+  MixerGroup: {fileID: 24300002, guid: 313a3a9607d5fce478e70c060e06840d, type: 2}
   _children: []
   Filtered: 0
   FoldedOut: 0
