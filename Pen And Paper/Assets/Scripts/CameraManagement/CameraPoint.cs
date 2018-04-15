@@ -26,6 +26,7 @@ public class CameraPoint : MonoBehaviour
 
     public void MountCamera(Transform cam)
     {
+        Debug.Log("Camera: "+ gameObject.name);
         currentDotSequence = DOTween.Sequence();
         cam.parent = null;
         float value = 0;

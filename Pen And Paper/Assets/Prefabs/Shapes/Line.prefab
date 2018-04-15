@@ -243,7 +243,7 @@ MonoBehaviour:
   BreakDistance: 0
   Line: {fileID: 1661192554419468, guid: fb4707911ce496448a519e116fc4b24a, type: 2}
   DistanceBetweenLinePoints: 0
-  LineThickness: 0.2
+  LineThickness: 0.15
   MinLineThickness: 0.05
   LineColor: {r: 0.64705884, g: 0.64705884, b: 0.64705884, a: 1}
   positions:
@@ -252,7 +252,7 @@ MonoBehaviour:
   - {fileID: 4168080756233010}
   - {fileID: 4833576405010086}
   - {fileID: 4923860410742412}
-  Closeness: 0.2
+  Closeness: 0.3
 --- !u!212 &212265928736090906
 SpriteRenderer:
   m_ObjectHideFlags: 1
