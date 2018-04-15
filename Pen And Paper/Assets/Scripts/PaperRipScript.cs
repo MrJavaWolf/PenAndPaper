@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class PaperRipScript : Singleton<PaperRipScript>
 {
+    public InAudioEvent PaperRip;
+
     public Transform RightHand;
     public Transform RightPaper;
 
@@ -38,6 +40,7 @@ public class PaperRipScript : Singleton<PaperRipScript>
         PlayCamera.Instance.transform.position = cameraPosition;
         PlayCamera.Instance.transform.LookAt(paperCentralPosition);
         yield return new WaitForSeconds(1);
+        InAudio.PostEvent(gameObject, PaperRip);
         LeftHand.DOMove(LeftHand.position - LeftHand.right * 2, 1).SetEase(PaperMovement);
         RightHand.DOMove(RightHand.position + RightHand.right * 2, 1).SetEase(PaperMovement);
         yield return new WaitForSeconds(4);

@@ -7648,8 +7648,6 @@ MonoBehaviour:
     - Event: {fileID: 114709537925116336, guid: ded889cc89bc7d142bdbf65ee27ae33f,
         type: 2}
       PostAt: 0
-  ResetAudio:
-    Events: []
 --- !u!4 &1349584293
 Transform:
   m_ObjectHideFlags: 0
@@ -7679,6 +7677,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DontDestroyOnLoadConfig: 0
+  PaperRip:
+    Events:
+    - Event: {fileID: 114238536532288136, guid: ded889cc89bc7d142bdbf65ee27ae33f,
+        type: 2}
+      PostAt: 0
   RightHand: {fileID: 184360708}
   RightPaper: {fileID: 184360709}
   LeftHand: {fileID: 184360711}
@@ -8173,7 +8176,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4012200358223050, guid: aa99329b19fd72843b60732ce4fd1dc5, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aa99329b19fd72843b60732ce4fd1dc5, type: 2}
@@ -8311,7 +8314,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1876609415
 GameObject:

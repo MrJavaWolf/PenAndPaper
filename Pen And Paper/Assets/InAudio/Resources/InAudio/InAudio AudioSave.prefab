@@ -83,6 +83,8 @@ GameObject:
   - component: {fileID: 114503094968274396}
   - component: {fileID: 114895530706053388}
   - component: {fileID: 114721060218940336}
+  - component: {fileID: 114840031283309890}
+  - component: {fileID: 114748123594745400}
   m_Layer: 0
   m_Name: InAudio AudioSave
   m_TagString: Untagged
@@ -532,6 +534,7 @@ MonoBehaviour:
   - {fileID: 114532253575409244}
   - {fileID: 114455750600517056}
   - {fileID: 114861123268477538}
+  - {fileID: 114840031283309890}
   Filtered: 0
   FoldedOut: 1
   ScrollPosition: {x: 0, y: 0}
@@ -2078,6 +2081,72 @@ MonoBehaviour:
     m_RotationOrder: 4
   _clip: {fileID: 8300000, guid: 13ee4b57fe136e24aa3190607e2ad1eb, type: 3}
   LoadedFromAssetBundle: 0
+--- !u!114 &114748123594745400
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1157775257787552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc14a519ae4a03499b0c9ddb2abae5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RandomVolume: 0
+  MinVolume: 1
+  MaxVolume: 1
+  RandomizeDelay: 0
+  InitialDelayMin: 0
+  InitialDelayMax: 0
+  RandomPitch: 0
+  MinPitch: 1
+  MaxPitch: 1
+  RandomBlend: 0
+  MinBlend: 0
+  MaxBlend: 1
+  Loop: 0
+  LoopInfinite: 0
+  RandomizeLoops: 0
+  MinIterations: 1
+  MaxIterations: 1
+  OverrideAttenuation: 0
+  MinDistance: 1
+  MaxDistance: 500
+  RolloffMode: 0
+  LimitInstances: 0
+  MaxInstances: 1
+  InstanceStealingTypes: 0
+  Priority: 128
+  RandomSecondsOffset: 0
+  MinSecondsOffset: 0
+  MaxSecondsOffset: 0
+  SelectedArea: 0
+  FalloffCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _clip: {fileID: 8300000, guid: 727da0be5f87c1a45b8c82b6436d8b3c, type: 3}
+  LoadedFromAssetBundle: 0
 --- !u!114 &114748775511469914
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2331,6 +2400,28 @@ MonoBehaviour:
     m_RotationOrder: 4
   _clip: {fileID: 8300000, guid: 71f567ef83bde4540b565136d30419d6, type: 3}
   LoadedFromAssetBundle: 0
+--- !u!114 &114840031283309890
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1157775257787552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19242b74995c0e44a8799397a6b0059a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 1118848448
+  _type: 2
+  _nodeData: {fileID: 114748123594745400}
+  Name: PaperRip
+  _parent: {fileID: 114143607717903476}
+  OverrideParentMixerGroup: 0
+  MixerGroup: {fileID: 24300002, guid: f6f35721edf3fc84a88d188753f59889, type: 2}
+  _children: []
+  Filtered: 0
+  FoldedOut: 0
+  ScrollPosition: {x: 0, y: 0}
 --- !u!114 &114841303883574870
 MonoBehaviour:
   m_ObjectHideFlags: 1

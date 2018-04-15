@@ -53,6 +53,8 @@ GameObject:
   - component: {fileID: 114123244906974778}
   - component: {fileID: 114375722064157956}
   - component: {fileID: 114480034458633326}
+  - component: {fileID: 114238536532288136}
+  - component: {fileID: 114806326886665134}
   m_Layer: 0
   m_Name: InAudio EventSave
   m_TagString: Untagged
@@ -277,6 +279,28 @@ MonoBehaviour:
   _eventActionType: 12
   Snapshot: {fileID: 245132990219689194, guid: f6f35721edf3fc84a88d188753f59889, type: 2}
   TransitionTime: 1
+--- !u!114 &114238536532288136
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781774024281992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a512d6d4125cef14881f432b3a65959c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 1205389306
+  _type: 3
+  Name: PaperRip
+  _parent: {fileID: 114923389706110574}
+  Delay: 0
+  _children: []
+  _actionList:
+  - {fileID: 114806326886665134}
+  FoldedOut: 1
+  Filtered: 0
+  PlacedExternaly: 0
 --- !u!114 &114249328249260120
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -581,6 +605,22 @@ MonoBehaviour:
   FoldedOut: 1
   Filtered: 0
   PlacedExternaly: 0
+--- !u!114 &114806326886665134
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781774024281992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6887394428e7c84195fcfc84974e9b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 0
+  _eventActionType: 1
+  Node: {fileID: 114840031283309890, guid: 5b76fb594578fca47b05b02ed7cdb505, type: 2}
+  Fadetime: 0
+  TweenType: 1
 --- !u!114 &114835302746570200
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -649,6 +689,7 @@ MonoBehaviour:
   - {fileID: 114069149562385058}
   - {fileID: 114154161870915350}
   - {fileID: 114998903753470320}
+  - {fileID: 114238536532288136}
   _actionList: []
   FoldedOut: 1
   Filtered: 0

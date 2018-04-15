@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class PlaySceneController : Singleton<PlaySceneController>
 {
     public InAudioEvent StopAudio;
-    public InAudioEvent ResetAudio;
     public static bool SoundPlay;
 
     // Use this for initialization
