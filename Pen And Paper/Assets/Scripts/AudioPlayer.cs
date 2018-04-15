@@ -8,6 +8,7 @@ public class AudioPlayer : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        InAudio.PostEvent(gameObject, AudioEvent);
+        if (PlaySceneController.SoundPlay)
+            InAudio.PostEvent(gameObject, AudioEvent);
     }
 }

@@ -6,9 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class PlaySceneController : Singleton<PlaySceneController>
 {
+    public InAudioEvent StopAudio;
+    public InAudioEvent ResetAudio;
+    public static bool SoundPlay;
+
     // Use this for initialization
     void Start()
     {
+        SoundPlay = true;
+
         PaperController.Instance.OnPaperRip += Instance_OnPaperRip;
         ShapeManager.Instance.OnPenBreaking += Instance_OnPenBreaking;
         ShapeManager.Instance.GameEnded += Instance_GameEnded;
@@ -35,7 +41,7 @@ public class PlaySceneController : Singleton<PlaySceneController>
         {
             ShapeManager.Instance.GoToNextShape();
         }
-        
+
     }
 
     private void Instance_GameEnded()
@@ -46,6 +52,8 @@ public class PlaySceneController : Singleton<PlaySceneController>
     private void Instance_OnPenBreaking()
     {
         DisablePlayScripts();
+        InAudio.PostEvent(gameObject, StopAudio);
+        SoundPlay = false;
         PencilBrokeScript.Instance.Play(() =>
         {
             SceneManager.LoadScene("Finished Lost");
@@ -54,7 +62,9 @@ public class PlaySceneController : Singleton<PlaySceneController>
 
     private void Instance_OnPaperRip(object sender, System.EventArgs e)
     {
+        InAudio.PostEvent(gameObject, StopAudio);
         DisablePlayScripts();
+        SoundPlay = false;
         PaperRipScript.Instance.Play(() =>
         {
             SceneManager.LoadScene("Finished Lost");
