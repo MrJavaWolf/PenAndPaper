@@ -78,7 +78,7 @@ public class ShapeController : MonoBehaviour
         //Check for shape filled
         if (IsShapeFilled())
         {
-            ShapeManager.Instance.GetNextShape();
+            ShapeManager.Instance.GoToNextShape();
         }
 
         if (PenController.Instance.GetTipPosition().z > 0.4)
