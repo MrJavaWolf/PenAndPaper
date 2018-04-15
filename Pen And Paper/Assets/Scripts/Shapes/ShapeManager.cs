@@ -21,23 +21,29 @@ public class ShapeManager : Singleton<ShapeManager>
         currShape = Instantiate(Shapes[currShapeIndex], transform, true).GetComponent<ShapeController>();
     }
 
-    public void GetNextShape()
+    public void GoToNextShape()
     {
-        if ((currShapeIndex + 1) < Shapes.Count)
+        ChangeChallangeEffect.Instance.Play(()=>
         {
-            if (NewShape != null)
-                NewShape.Invoke();
+            if ((currShapeIndex + 1) < Shapes.Count)
+            {
+                if (NewShape != null)
+                    NewShape.Invoke();
 
-            currShapeIndex++;
-            Destroy(currShape.gameObject);
-            currShape = Instantiate(Shapes[currShapeIndex], transform, true).GetComponent<ShapeController>();
-            currShape.transform.localPosition = Vector2.zero;
-            currShape.transform.localRotation = Quaternion.Euler(Vector3.zero);
-        }
-        else
-        {
-            if (GameEnded != null) GameEnded();
-        }
+                currShapeIndex++;
+                Destroy(currShape.gameObject);
+                currShape = Instantiate(Shapes[currShapeIndex], transform, true).GetComponent<ShapeController>();
+                currShape.transform.localPosition = Vector2.zero;
+                currShape.transform.localRotation = Quaternion.Euler(Vector3.zero);
+                CameraManager.Instance.GoToNextCameraAngle();
+            }
+            else
+            {
+                if (GameEnded != null) GameEnded();
+            }
+        });
+
+        
     }
 
     private void OnTriggerEnter(Collider other)

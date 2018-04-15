@@ -58,7 +58,7 @@ public class CameraPoint : MonoBehaviour
     {
         if (timer < 0)
         {
-            CameraManager.Instance.NextCameraAngle();
+            CameraManager.Instance.GoToNextCameraAngle();
             timer = Duration;
             Attached = false;
         }
