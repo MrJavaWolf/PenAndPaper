@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlaySceneController : MonoBehaviour
+public class PlaySceneController : Singleton<PlaySceneController>
 {
     public InAudioEvent StopAudio;
     public static bool SoundPlay;
@@ -35,6 +35,12 @@ public class PlaySceneController : MonoBehaviour
         {
             Instance_GameEnded();
         }
+
+        if (Input.GetKeyUp(KeyCode.E))
+        {
+            ShapeManager.Instance.GoToNextShape();
+        }
+        
     }
 
     private void Instance_GameEnded()
@@ -65,7 +71,7 @@ public class PlaySceneController : MonoBehaviour
     }
 
 
-    private void DisablePlayScripts()
+    public void DisablePlayScripts()
     {
         var cameraPoints = FindObjectsOfType<CameraPoint>();
         foreach (var camPoint in cameraPoints)
@@ -79,6 +85,23 @@ public class PlaySceneController : MonoBehaviour
         foreach (var shapeController in shapeControllers)
         {
             shapeController.enabled = false;
+        }
+    }
+
+    public void EnablePlayScripts()
+    {
+        var cameraPoints = FindObjectsOfType<CameraPoint>();
+        foreach (var camPoint in cameraPoints)
+        {
+            camPoint.enabled = true;
+        }
+        PenController.Instance.enabled = true;
+        PaperController.Instance.enabled = true;
+        ShapeManager.Instance.enabled = true;
+        var shapeControllers = FindObjectsOfType<ShapeController>();
+        foreach (var shapeController in shapeControllers)
+        {
+            shapeController.enabled = true;
         }
     }
 }

@@ -19,7 +19,7 @@ public class CameraManager : Singleton<CameraManager>
         CamPoints[lastIndex].MountCamera(PlayCamera.Instance.transform);
     }
 
-    public void NextCameraAngle()
+    public void GoToNextCameraAngle()
     {
         if (CamPoints.Count < 1)
         {
