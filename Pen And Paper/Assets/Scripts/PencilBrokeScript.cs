@@ -1,8 +1,8 @@
-﻿using DG.Tweening;
-using EZCameraShake;
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
+using EZCameraShake;
 using UnityEngine;
 
 public class PencilBrokeScript : Singleton<PencilBrokeScript>
@@ -66,25 +66,23 @@ public class PencilBrokeScript : Singleton<PencilBrokeScript>
             Vector3 sideDirections = UnityEngine.Random.insideUnitCircle.normalized;
             Vector3 forwardDirection = penPart.forward;
             var randomRotation = UnityEngine.Random.insideUnitSphere;
-            Quaternion firstRotation = Quaternion.Euler(randomRotation * 30);
-            Quaternion secondRotation = Quaternion.Euler(randomRotation * 90);
             var direction = Vector3.Lerp(sideDirections, forwardDirection, i / (PenParts.Length - 1));
             penPart.DORotate(randomRotation * 30, 0.1f)
-                .OnComplete(()=>
-            {
-                penPart.DORotate(randomRotation * 90, 7f);
-            });
+                .OnComplete(() =>
+                {
+                    penPart.DORotate(randomRotation * 90, 7f);
+                });
             penPart.DOMove(penPart.position +
-               penPart.up * direction.y +
-               penPart.forward * direction.z +
-               penPart.right * direction.x, 0.1f)
-            .OnComplete(() =>
-            {
-                penPart.DOMove(penPart.position +
                     penPart.up * direction.y +
                     penPart.forward * direction.z +
-                    penPart.right * direction.x, 7f);
-            });
+                    penPart.right * direction.x, 0.1f)
+                .OnComplete(() =>
+                {
+                    penPart.DOMove(penPart.position +
+                        penPart.up * direction.y +
+                        penPart.forward * direction.z +
+                        penPart.right * direction.x, 7f);
+                });
         }
 
         yield return new WaitForSeconds(5);

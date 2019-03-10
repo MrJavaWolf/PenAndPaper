@@ -1,8 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using InControl;
 using UnityEngine;
-using System;
-
 
 public class CharacterSelect : MonoBehaviour
 {
@@ -10,9 +10,6 @@ public class CharacterSelect : MonoBehaviour
     private bool confirmed = false; // Player selected a character
 
     public bool firstPlayer = true;
-
-    private XBoxInput inputA;
-    private Ps4Input inputB;
 
     private Vector2 userInputMovement;
 
@@ -24,10 +21,6 @@ public class CharacterSelect : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        //this.MoveCursor(0);
-        inputA = InputController.Instance.GetXBoxInput();
-        inputB = InputController.Instance.GetPs4Input();
-
         avatarsA = GameObject.Find("Character Avatars 1");
         avatarsB = GameObject.Find("Character Avatars 2");
 
@@ -35,20 +28,24 @@ public class CharacterSelect : MonoBehaviour
 
         readyCheck = GameObject.Find("Ready Check").GetComponent<ReadyCheck>();
 
-
         this.Left();
     }
 
-    void HideAllAvatars(string characterRole) {
+    void HideAllAvatars(string characterRole)
+    {
         GameObject avatars;
 
-        if(characterRole == "A") {
+        if (characterRole == "A")
+        {
             avatars = avatarsA;
-        } else {
+        }
+        else
+        {
             avatars = avatarsB;
         }
 
-        foreach(Transform child in avatars.transform) {
+        foreach (Transform child in avatars.transform)
+        {
             SpriteRenderer sprite = child.gameObject.GetComponent<SpriteRenderer>();
             sprite.enabled = false;
         }
@@ -81,7 +78,6 @@ public class CharacterSelect : MonoBehaviour
             this.currentSelection += 6;
         }
         this.currentSelection = (this.currentSelection % 6);
-        Debug.Log(this.currentSelection);
         this.updateSelected(this.currentSelection, true);
     }
 
@@ -91,9 +87,11 @@ public class CharacterSelect : MonoBehaviour
         GameObject box = transform.Find("Character " + boxNo).gameObject;
         CharacterBox characterBox = box.GetComponent<CharacterBox>();
 
-        if(isOn) {
+        if (isOn)
+        {
             Transform audioHoverObject = box.transform.Find("Hovered Audio");
-            if(audioHoverObject) {
+            if (audioHoverObject)
+            {
                 audioHoverObject.gameObject.GetComponent<AudioSource>().Play();
             }
         }
@@ -101,29 +99,32 @@ public class CharacterSelect : MonoBehaviour
         UpdateSelectedAvatar();
     }
 
-    void UpdateSelectedAvatar() {
+    void UpdateSelectedAvatar()
+    {
         string characterName = "Unknown";
-        switch(this.currentSelection) {
+        switch (this.currentSelection)
+        {
             case 0:
                 characterName = "Brute";
-            break;
+                break;
             case 1:
                 characterName = "Feme";
-            break;
+                break;
             default:
                 characterName = "Unlock" + (this.currentSelection - 1).ToString();
-            break;
+                break;
         }
 
         this.HideAllAvatars(this.CharacterRole());
 
         GameObject avatars;
 
-        if(this.CharacterRole() == "A") {
-            Debug.Log("Updating avatar for A");
+        if (this.CharacterRole() == "A")
+        {
             avatars = this.avatarsA;
-        } else {
-            Debug.Log("Updating avatar for B");
+        }
+        else
+        {
             avatars = this.avatarsB;
         }
 
@@ -131,12 +132,14 @@ public class CharacterSelect : MonoBehaviour
         sprite.enabled = true;
     }
 
-    string CharacterRole() {
-        if(this.firstPlayer) {
-            Debug.Log("Character role A");
+    string CharacterRole()
+    {
+        if (this.firstPlayer)
+        {
             return "A";
-        } else {
-            Debug.Log("Character role B");
+        }
+        else
+        {
             return "B";
         }
     }
@@ -147,18 +150,19 @@ public class CharacterSelect : MonoBehaviour
         float slowdown = 0.9f;
         float treshold = 3.5f;
 
-
         if (!confirmed)
         {
             if (firstPlayer)
             {
-                if (inputA.ButtonX || inputA.ButtonA || inputA.ButtonB || inputA.ButtonY || Input.GetKeyUp(KeyCode.Z))
+                if (InputManager.Devices[0].AnyButton)
                 {
-                    if(this.currentSelection == 0 || this.currentSelection == 1) {
+                    if (this.currentSelection == 0 || this.currentSelection == 1)
+                    {
                         string boxNo = (this.currentSelection + 1).ToString();
                         GameObject box = transform.Find("Character " + boxNo).gameObject;
                         Transform audioSelectObject = box.transform.Find("Selected Audio");
-                        if(audioSelectObject) {
+                        if (audioSelectObject)
+                        {
                             audioSelectObject.gameObject.GetComponent<AudioSource>().Play();
                         }
 
@@ -168,17 +172,19 @@ public class CharacterSelect : MonoBehaviour
                     }
                 }
 
-                this.userInputMovement += inputA.LeftStick;
+                this.userInputMovement += InputManager.Devices[0].LeftStick;
             }
             else
             {
-                if (inputB.ButtonX || inputB.ButtonCircle || inputB.ButtonTriangle || inputB.ButtonSquare || Input.GetKeyUp(KeyCode.X))
+                if (InputManager.Devices[1].AnyButton)
                 {
-                    if(this.currentSelection == 0 || this.currentSelection == 1) {
+                    if (this.currentSelection == 0 || this.currentSelection == 1)
+                    {
                         string boxNo = (this.currentSelection + 1).ToString();
                         GameObject box = transform.Find("Character " + boxNo).gameObject;
                         Transform audioSelectObject = box.transform.Find("Selected Audio");
-                        if(audioSelectObject) {
+                        if (audioSelectObject)
+                        {
                             audioSelectObject.gameObject.GetComponent<AudioSource>().Play();
                         }
 
@@ -188,7 +194,7 @@ public class CharacterSelect : MonoBehaviour
                     }
                 }
 
-                this.userInputMovement += inputB.LeftStick;
+                this.userInputMovement += InputManager.Devices[1].LeftStick;
             }
 
             this.userInputMovement *= slowdown;
@@ -215,26 +221,6 @@ public class CharacterSelect : MonoBehaviour
             {
                 this.Down();
                 this.userInputMovement = Vector2.zero;
-            }
-
-            if (Input.GetKeyUp(KeyCode.RightArrow))
-            {
-                this.Right();
-            }
-
-            if (Input.GetKeyUp(KeyCode.LeftArrow))
-            {
-                this.Left();
-            }
-
-            if (Input.GetKeyUp(KeyCode.UpArrow))
-            {
-                this.Up();
-            }
-
-            if (Input.GetKeyUp(KeyCode.DownArrow))
-            {
-                this.Down();
             }
         }
     }

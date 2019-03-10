@@ -20,7 +20,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 
             if (instance == null)
             {
-                instance = (T)FindObjectOfType(typeof(T));
+                instance = (T) FindObjectOfType(typeof(T));
 
                 if (instance == null)
                 {
@@ -52,6 +52,12 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     [ExecuteInEditMode]
     protected virtual void Awake()
     {
+        var all = FindObjectsOfType<T>();
+
+        foreach (var item in all)
+            if (item != this)
+                Destroy(item.gameObject);
+
         if (DontDestroyOnLoadConfig)
             DontDestroyOnLoad(gameObject);
     }

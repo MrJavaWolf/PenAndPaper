@@ -1,13 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using InControl;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    private XBoxInput inputA;
-    private Ps4Input inputB;
-
     public string sceneName;
 
     public void GoToScene(string name)
@@ -15,16 +13,9 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene(name);
     }
 
-    public void Start()
-    {
-        inputA = InputController.Instance.GetXBoxInput();
-        inputB = InputController.Instance.GetPs4Input();
-    }
-
     public void Update()
     {
-        if (inputA.ButtonX || inputA.ButtonA || inputA.ButtonB || inputA.ButtonY ||
-             inputB.ButtonCircle || inputB.ButtonSquare || inputB.ButtonTriangle || inputB.ButtonX)
+        if (InputManager.ActiveDevice.AnyButton)
         {
             GoToScene(sceneName);
         }

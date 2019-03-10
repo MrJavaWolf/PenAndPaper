@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using InControl;
 using UnityEngine;
 
 public class PaperController : Singleton<PaperController>
@@ -20,12 +21,11 @@ public class PaperController : Singleton<PaperController>
     // Update is called once per frame
     void Update()
     {
-        var input = InputController.Instance.GetPs4Input();
         var prevLeftHandPostition = LeftHand.Hand.position;
         var prevRightHandPostition = RightHand.Hand.position;
-        UpdateHand(LeftHand, input.LeftStick);
-        UpdateHand(RightHand, input.RightStick);
-  
+        UpdateHand(LeftHand, InputManager.Devices[0].LeftStick);
+        UpdateHand(RightHand, InputManager.Devices[0].RightStick);
+
         if (WillPaperRip())
         {
             if (OnPaperRip != null) OnPaperRip(this, EventArgs.Empty);

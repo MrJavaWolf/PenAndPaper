@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using InControl;
 using UnityEngine;
 
 public class PenController : Singleton<PenController>
@@ -37,13 +38,12 @@ public class PenController : Singleton<PenController>
 
     public void Update()
     {
-        var input = InputController.Instance.GetXBoxInput();
         float perlinNoise = Mathf.PerlinNoise(perlinNoiseCoordinate.x, perlinNoiseCoordinate.y);
         float perlinNoiseRange = perlinNoise * 2 - 1;
         var movement =
-            transform.forward * input.RightStick.y * MovementSpeed * Time.deltaTime +
-            transform.right * input.LeftStick.x * MovementSpeed * Time.deltaTime +
-            transform.up * input.LeftStick.y * MovementSpeed * Time.deltaTime;
+            transform.forward * InputManager.Devices[1].RightStick.Y * MovementSpeed * Time.deltaTime +
+            transform.right * InputManager.Devices[1].LeftStick.X * MovementSpeed * Time.deltaTime +
+            transform.up * InputManager.Devices[1].LeftStick.Y * MovementSpeed * Time.deltaTime;
         if (!DisableShakes)
             movement += transform.forward * BaseSpeed * Time.deltaTime +
             ((transform.up * (1 - perlinNoise)) + (transform.right * perlinNoise)).normalized * perlinNoiseRange * MovmentBias * Time.deltaTime +
